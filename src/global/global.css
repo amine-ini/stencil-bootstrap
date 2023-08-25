@@ -1,0 +1,15 @@
+.card {
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid cornflowerblue;
+  background: #daf1ff;
+  max-width: 200px;
+}
+
+.button {
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
