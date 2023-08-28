@@ -4,7 +4,7 @@ import prefixer from 'postcss-prefixer';
 import { postcss } from '@stencil-community/postcss';
 
 export const config: Config = {
-  namespace: 'test-remove',
+  namespace: 'stencil-bootstrap',
   outputTargets: [
     {
       type: 'www'
