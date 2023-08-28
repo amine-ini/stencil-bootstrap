@@ -9,6 +9,7 @@ export namespace Components {
     interface IniButton {
     }
     interface IniCard {
+        "title": string;
     }
 }
 declare global {
@@ -33,6 +34,7 @@ declare namespace LocalJSX {
     interface IniButton {
     }
     interface IniCard {
+        "title"?: string;
     }
     interface IntrinsicElements {
         "ini-button": IniButton;

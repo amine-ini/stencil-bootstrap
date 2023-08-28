@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import {Component, h, Prop} from '@stencil/core';
 
 @Component({
   tag: 'ini-card',
@@ -6,11 +6,15 @@ import { Component, h } from '@stencil/core';
   shadow: false,
 })
 export class IniCard {
+  @Prop() title: string;
 
   render() {
     return (
-      <div class="card">
-        <slot></slot>
+      <div class="ini-card">
+        <div class="ini-card-body">
+          {this.title && <h5 class="ini-card-title">{this.title}</h5>}
+          <slot></slot>
+        </div>
       </div>
     );
   }
