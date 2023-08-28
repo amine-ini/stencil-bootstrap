@@ -2,6 +2,7 @@ import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
 import prefixer from 'postcss-prefixer';
 import { postcss } from '@stencil-community/postcss';
+import PrefixWrap from 'postcss-prefixwrap';
 
 export const config: Config = {
   namespace: 'stencil-bootstrap',
@@ -16,7 +17,12 @@ export const config: Config = {
 
     }),
     postcss({
-      plugins: [prefixer({prefix: 'ini-'})]
+      plugins: [
+        prefixer({prefix: 'ini-'}),
+        PrefixWrap("ini-*")
+      ]
     })
   ]
 };
+
+// https://www.npmjs.com/package/postcss-prefixwrap
