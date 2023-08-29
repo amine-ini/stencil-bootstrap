@@ -14,15 +14,14 @@ export const config: Config = {
   plugins: [
     sass({
       injectGlobalPaths: ['src/global/global.scss'],
-
     }),
     postcss({
       plugins: [
         prefixer({prefix: 'ini-'}),
-        PrefixWrap("ini-*")
+        PrefixWrap(".hydrated:not(html)")
       ]
     })
   ]
 };
 
-// https://www.npmjs.com/package/postcss-prefixwrap
+// https://www.postcss.parts/ <-- all postcss plugins
