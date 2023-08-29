@@ -5,15 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <title>Stencil Component Starter</title>
 
-    <link rel="stylesheet" href="../www/build/stencil-bootstrap.css">
-    <script type="module" src="../www/build/stencil-bootstrap.esm.js"></script>
-<!--    <script type="module" src="/build/stencil-bootstrap.esm.js"></script>-->
+    <!--<link rel="stylesheet" href="../www/build/stencil-bootstrap.css">-->
+    <!--<script type="module" src="../www/build/stencil-bootstrap.esm.js"></script>-->
+    <script type="module" src="/build/stencil-bootstrap.esm.js"></script>
+    <link rel="stylesheet" href="/build/stencil-bootstrap.css">
   </head>
   <body>
     <ini-card header-title="C'est le titre du card">
-      <ini-button variant="danger" size="small">Un bouton 😄</ini-button>
-      <ini-button variant="info">Un bouton 😄</ini-button>
-      <ini-button variant="success" size="large">Un bouton 😄</ini-button>
+      <div>
+        <ini-button variant="danger" size="small">Un bouton 😄</ini-button>
+        <ini-button variant="info">Un bouton 😄</ini-button>
+        <ini-button variant="success" size="large">Un bouton 😄</ini-button>
+        <ini-button disabled>Disabled 🙁</ini-button>
+        <ini-button outline>Outline 🙄</ini-button>
+      </div>
+      <div>
+        <ini-badge>primary</ini-badge>
+        <ini-badge variant="danger">danger</ini-badge>
+        <ini-badge variant="warning">danger</ini-badge>
+      </div>
+      <div>
+        <ini-dropdown></ini-dropdown>
+      </div>
     </ini-card>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid at fugiat maxime, minima minus mollitia natus

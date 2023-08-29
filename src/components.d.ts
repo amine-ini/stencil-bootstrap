@@ -6,15 +6,28 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface IniBadge {
+        "variant": "primary"|"secondary"|"success"|"danger"|"warning"|"info";
+    }
     interface IniButton {
+        "disabled": boolean;
+        "outline": boolean;
         "size": "small"|"medium"|"large";
         "variant": "primary"|"secondary"|"success"|"danger"|"warning"|"info";
     }
     interface IniCard {
         "headerTitle": string;
     }
+    interface IniDropdown {
+    }
 }
 declare global {
+    interface HTMLIniBadgeElement extends Components.IniBadge, HTMLStencilElement {
+    }
+    var HTMLIniBadgeElement: {
+        prototype: HTMLIniBadgeElement;
+        new (): HTMLIniBadgeElement;
+    };
     interface HTMLIniButtonElement extends Components.IniButton, HTMLStencilElement {
     }
     var HTMLIniButtonElement: {
@@ -27,30 +40,49 @@ declare global {
         prototype: HTMLIniCardElement;
         new (): HTMLIniCardElement;
     };
+    interface HTMLIniDropdownElement extends Components.IniDropdown, HTMLStencilElement {
+    }
+    var HTMLIniDropdownElement: {
+        prototype: HTMLIniDropdownElement;
+        new (): HTMLIniDropdownElement;
+    };
     interface HTMLElementTagNameMap {
+        "ini-badge": HTMLIniBadgeElement;
         "ini-button": HTMLIniButtonElement;
         "ini-card": HTMLIniCardElement;
+        "ini-dropdown": HTMLIniDropdownElement;
     }
 }
 declare namespace LocalJSX {
+    interface IniBadge {
+        "variant"?: "primary"|"secondary"|"success"|"danger"|"warning"|"info";
+    }
     interface IniButton {
+        "disabled"?: boolean;
+        "outline"?: boolean;
         "size"?: "small"|"medium"|"large";
         "variant"?: "primary"|"secondary"|"success"|"danger"|"warning"|"info";
     }
     interface IniCard {
         "headerTitle"?: string;
     }
+    interface IniDropdown {
+    }
     interface IntrinsicElements {
+        "ini-badge": IniBadge;
         "ini-button": IniButton;
         "ini-card": IniCard;
+        "ini-dropdown": IniDropdown;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "ini-badge": LocalJSX.IniBadge & JSXBase.HTMLAttributes<HTMLIniBadgeElement>;
             "ini-button": LocalJSX.IniButton & JSXBase.HTMLAttributes<HTMLIniButtonElement>;
             "ini-card": LocalJSX.IniCard & JSXBase.HTMLAttributes<HTMLIniCardElement>;
+            "ini-dropdown": LocalJSX.IniDropdown & JSXBase.HTMLAttributes<HTMLIniDropdownElement>;
         }
     }
 }
