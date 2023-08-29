@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import {Component, h, Host, Prop} from '@stencil/core';
 
 @Component({
   tag: 'ini-button',
@@ -6,13 +6,24 @@ import { Component, h } from '@stencil/core';
   shadow: false,
 })
 export class IniButton {
+  @Prop() size: "small"|"medium"|"large" = "medium";
+
+  @Prop() variant: "primary"|"secondary"|"success"|"danger"|"warning"|"info" = "primary";
 
   render() {
+    const classes = {
+      'ini-btn': true,
+      [`ini-btn-${this.variant}`]: true,
+      'ini-btn-sm': this.size === "small",
+      'ini-btn-lg': this.size === "large",
+    };
+
     return (
-      <button class="ini-btn ini-btn-primary">
-        <slot></slot>
-      </button>
+      <Host data-webcomponent={true}>
+        <button class={classes}>
+          <slot/>
+        </button>
+      </Host>
     );
   }
-
 }

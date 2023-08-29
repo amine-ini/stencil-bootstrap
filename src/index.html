@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <title>Stencil Component Starter</title>
 
+    <link rel="stylesheet" href="../www/build/stencil-bootstrap.css">
     <script type="module" src="../www/build/stencil-bootstrap.esm.js"></script>
 <!--    <script type="module" src="/build/stencil-bootstrap.esm.js"></script>-->
   </head>
   <body>
-    <ini-card title="C'est le titre du card">
-      <ini-button>Un bouton 😄</ini-button>
+    <ini-card header-title="C'est le titre du card">
+      <ini-button variant="danger" size="small">Un bouton 😄</ini-button>
+      <ini-button variant="info">Un bouton 😄</ini-button>
+      <ini-button variant="success" size="large">Un bouton 😄</ini-button>
     </ini-card>
 
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid at fugiat maxime, minima minus mollitia natus

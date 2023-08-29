@@ -1,0 +1,3 @@
+Il faut englober chaque composant avec <Host data-webcomponent={true}>
+C'est ce qui va permettre que le style Bootstrap fonctionne sur les web components,
+Sans ça, le style ne sera pas appliqué.

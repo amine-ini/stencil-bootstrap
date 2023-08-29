@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `title`  | `title`   |             | `string` | `undefined` |
+| Property      | Attribute      | Description | Type     | Default     |
+| ------------- | -------------- | ----------- | -------- | ----------- |
+| `headerTitle` | `header-title` |             | `string` | `undefined` |
 
 
 ----------------------------------------------

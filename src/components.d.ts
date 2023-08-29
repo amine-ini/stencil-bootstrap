@@ -7,9 +7,11 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface IniButton {
+        "size": "small"|"medium"|"large";
+        "variant": "primary"|"secondary"|"success"|"danger"|"warning"|"info";
     }
     interface IniCard {
-        "title": string;
+        "headerTitle": string;
     }
 }
 declare global {
@@ -32,9 +34,11 @@ declare global {
 }
 declare namespace LocalJSX {
     interface IniButton {
+        "size"?: "small"|"medium"|"large";
+        "variant"?: "primary"|"secondary"|"success"|"danger"|"warning"|"info";
     }
     interface IniCard {
-        "title"?: string;
+        "headerTitle"?: string;
     }
     interface IntrinsicElements {
         "ini-button": IniButton;

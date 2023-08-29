@@ -6,6 +6,7 @@ import PrefixWrap from 'postcss-prefixwrap';
 
 export const config: Config = {
   namespace: 'stencil-bootstrap',
+  globalStyle: 'src/global/reset.scss',
   outputTargets: [
     {
       type: 'www'
@@ -13,12 +14,12 @@ export const config: Config = {
   ],
   plugins: [
     sass({
-      injectGlobalPaths: ['src/global/global.scss'],
+      injectGlobalPaths: ['src/global/global.scss']
     }),
     postcss({
       plugins: [
         prefixer({prefix: 'ini-'}),
-        PrefixWrap(".hydrated:not(html)")
+        PrefixWrap("[data-webcomponent]", {ignoredSelectors: [':root']})
       ]
     })
   ]

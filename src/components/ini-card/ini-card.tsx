@@ -1,4 +1,4 @@
-import {Component, h, Prop} from '@stencil/core';
+import {Component, h, Host, Prop} from '@stencil/core';
 
 @Component({
   tag: 'ini-card',
@@ -6,16 +6,18 @@ import {Component, h, Prop} from '@stencil/core';
   shadow: false,
 })
 export class IniCard {
-  @Prop() title: string;
+  @Prop() headerTitle: string;
 
   render() {
     return (
-      <div class="ini-card">
-        <div class="ini-card-body">
-          {this.title && <h5 class="ini-card-title">{this.title}</h5>}
-          <slot></slot>
+      <Host data-webcomponent={true}>
+        <div class="ini-card">
+          <div class="ini-card-body">
+            {this.headerTitle && <h5 class="ini-card-title">{this.headerTitle}</h5>}
+            <slot/>
+          </div>
         </div>
-      </div>
+      </Host>
     );
   }
 
