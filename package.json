@@ -28,7 +28,8 @@
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "@stencil/core": "^4.0.0",
-    "bootstrap": "^5.3.1"
+    "bootstrap": "^5.3.1",
+    "tom-select": "^2.2.2"
   },
   "devDependencies": {
     "@stencil-community/postcss": "^2.2.0",

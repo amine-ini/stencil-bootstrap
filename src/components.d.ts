@@ -46,6 +46,8 @@ export namespace Components {
         "headerTitle": string;
         "open": boolean;
     }
+    interface IniSelect {
+    }
     interface IniTooltip {
         "placement": "top" | "bottom" | "right" | "left";
         "titleContent": string;
@@ -98,6 +100,12 @@ declare global {
         prototype: HTMLIniModalElement;
         new (): HTMLIniModalElement;
     };
+    interface HTMLIniSelectElement extends Components.IniSelect, HTMLStencilElement {
+    }
+    var HTMLIniSelectElement: {
+        prototype: HTMLIniSelectElement;
+        new (): HTMLIniSelectElement;
+    };
     interface HTMLIniTooltipElement extends Components.IniTooltip, HTMLStencilElement {
     }
     var HTMLIniTooltipElement: {
@@ -112,6 +120,7 @@ declare global {
         "ini-dropdown": HTMLIniDropdownElement;
         "ini-input": HTMLIniInputElement;
         "ini-modal": HTMLIniModalElement;
+        "ini-select": HTMLIniSelectElement;
         "ini-tooltip": HTMLIniTooltipElement;
     }
 }
@@ -157,6 +166,8 @@ declare namespace LocalJSX {
         "headerTitle"?: string;
         "open"?: boolean;
     }
+    interface IniSelect {
+    }
     interface IniTooltip {
         "placement"?: "top" | "bottom" | "right" | "left";
         "titleContent"?: string;
@@ -169,6 +180,7 @@ declare namespace LocalJSX {
         "ini-dropdown": IniDropdown;
         "ini-input": IniInput;
         "ini-modal": IniModal;
+        "ini-select": IniSelect;
         "ini-tooltip": IniTooltip;
     }
 }
@@ -183,6 +195,7 @@ declare module "@stencil/core" {
             "ini-dropdown": LocalJSX.IniDropdown & JSXBase.HTMLAttributes<HTMLIniDropdownElement>;
             "ini-input": LocalJSX.IniInput & JSXBase.HTMLAttributes<HTMLIniInputElement>;
             "ini-modal": LocalJSX.IniModal & JSXBase.HTMLAttributes<HTMLIniModalElement>;
+            "ini-select": LocalJSX.IniSelect & JSXBase.HTMLAttributes<HTMLIniSelectElement>;
             "ini-tooltip": LocalJSX.IniTooltip & JSXBase.HTMLAttributes<HTMLIniTooltipElement>;
         }
     }
