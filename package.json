@@ -26,6 +26,7 @@
     "generate": "stencil generate"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.8",
     "@stencil/core": "^4.0.0",
     "bootstrap": "^5.3.1"
   },

@@ -5,9 +5,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type                             | Default    |
-| -------- | --------- | ----------- | -------------------------------- | ---------- |
-| `size`   | `size`    |             | `"large" \| "medium" \| "small"` | `"medium"` |
+| Property    | Attribute   | Description | Type                                     | Default    |
+| ----------- | ----------- | ----------- | ---------------------------------------- | ---------- |
+| `placement` | `placement` |             | `"bottom" \| "left" \| "right" \| "top"` | `"bottom"` |
+| `size`      | `size`      |             | `"large" \| "medium" \| "small"`         | `"medium"` |
 
 
 ## Dependencies

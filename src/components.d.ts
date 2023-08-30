@@ -6,6 +6,8 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface IniAlert {
+    }
     interface IniBadge {
         "variant": "primary" | "secondary" | "success" | "danger" | "warning" | "info";
     }
@@ -20,12 +22,18 @@ export namespace Components {
         "headerTitle": string;
     }
     interface IniDropdown {
+        "placement": "top" | "bottom" | "right" | "left";
         "size": "small" | "medium" | "large";
     }
     interface IniModal {
+        "centerY": boolean;
         "closeLabel": string;
         "headerTitle": string;
         "open": boolean;
+    }
+    interface IniTooltip {
+        "placement": "top" | "bottom" | "right" | "left";
+        "titleContent": string;
     }
 }
 export interface IniButtonCustomEvent<T> extends CustomEvent<T> {
@@ -33,6 +41,12 @@ export interface IniButtonCustomEvent<T> extends CustomEvent<T> {
     target: HTMLIniButtonElement;
 }
 declare global {
+    interface HTMLIniAlertElement extends Components.IniAlert, HTMLStencilElement {
+    }
+    var HTMLIniAlertElement: {
+        prototype: HTMLIniAlertElement;
+        new (): HTMLIniAlertElement;
+    };
     interface HTMLIniBadgeElement extends Components.IniBadge, HTMLStencilElement {
     }
     var HTMLIniBadgeElement: {
@@ -63,15 +77,25 @@ declare global {
         prototype: HTMLIniModalElement;
         new (): HTMLIniModalElement;
     };
+    interface HTMLIniTooltipElement extends Components.IniTooltip, HTMLStencilElement {
+    }
+    var HTMLIniTooltipElement: {
+        prototype: HTMLIniTooltipElement;
+        new (): HTMLIniTooltipElement;
+    };
     interface HTMLElementTagNameMap {
+        "ini-alert": HTMLIniAlertElement;
         "ini-badge": HTMLIniBadgeElement;
         "ini-button": HTMLIniButtonElement;
         "ini-card": HTMLIniCardElement;
         "ini-dropdown": HTMLIniDropdownElement;
         "ini-modal": HTMLIniModalElement;
+        "ini-tooltip": HTMLIniTooltipElement;
     }
 }
 declare namespace LocalJSX {
+    interface IniAlert {
+    }
     interface IniBadge {
         "variant"?: "primary" | "secondary" | "success" | "danger" | "warning" | "info";
     }
@@ -87,30 +111,40 @@ declare namespace LocalJSX {
         "headerTitle"?: string;
     }
     interface IniDropdown {
+        "placement"?: "top" | "bottom" | "right" | "left";
         "size"?: "small" | "medium" | "large";
     }
     interface IniModal {
+        "centerY"?: boolean;
         "closeLabel"?: string;
         "headerTitle"?: string;
         "open"?: boolean;
     }
+    interface IniTooltip {
+        "placement"?: "top" | "bottom" | "right" | "left";
+        "titleContent"?: string;
+    }
     interface IntrinsicElements {
+        "ini-alert": IniAlert;
         "ini-badge": IniBadge;
         "ini-button": IniButton;
         "ini-card": IniCard;
         "ini-dropdown": IniDropdown;
         "ini-modal": IniModal;
+        "ini-tooltip": IniTooltip;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "ini-alert": LocalJSX.IniAlert & JSXBase.HTMLAttributes<HTMLIniAlertElement>;
             "ini-badge": LocalJSX.IniBadge & JSXBase.HTMLAttributes<HTMLIniBadgeElement>;
             "ini-button": LocalJSX.IniButton & JSXBase.HTMLAttributes<HTMLIniButtonElement>;
             "ini-card": LocalJSX.IniCard & JSXBase.HTMLAttributes<HTMLIniCardElement>;
             "ini-dropdown": LocalJSX.IniDropdown & JSXBase.HTMLAttributes<HTMLIniDropdownElement>;
             "ini-modal": LocalJSX.IniModal & JSXBase.HTMLAttributes<HTMLIniModalElement>;
+            "ini-tooltip": LocalJSX.IniTooltip & JSXBase.HTMLAttributes<HTMLIniTooltipElement>;
         }
     }
 }

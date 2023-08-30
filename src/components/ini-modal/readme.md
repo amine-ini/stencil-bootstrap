@@ -7,6 +7,7 @@
 
 | Property      | Attribute      | Description | Type      | Default     |
 | ------------- | -------------- | ----------- | --------- | ----------- |
+| `centerY`     | `center-y`     |             | `boolean` | `true`      |
 | `closeLabel`  | `close-label`  |             | `string`  | `undefined` |
 | `headerTitle` | `header-title` |             | `string`  | `undefined` |
 | `open`        | `open`         |             | `boolean` | `false`     |

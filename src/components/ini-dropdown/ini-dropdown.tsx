@@ -1,4 +1,5 @@
 import {Component, Element, Host, h, Listen, Prop} from '@stencil/core';
+import {createPopper, Instance} from "@popperjs/core";
 
 @Component({
     tag: 'ini-dropdown',
@@ -10,8 +11,12 @@ export class IniDropdown {
 
     @Prop() size: "small" | "medium" | "large" = "medium";
 
+    @Prop() placement: "top" | "bottom" | "right" | "left" = "bottom";
+
     private contentElement: HTMLElement;
+    private triggerElement: HTMLElement;
     private showClass: string = 'ini-show';
+    private popperInstance: Instance;
 
     onTriggerClicked = () => {
         if (this.contentElement.classList.contains(this.showClass)) {
@@ -26,10 +31,16 @@ export class IniDropdown {
     }
 
     showDropdown() {
+        this.popperInstance.update();
         this.contentElement.classList.add(this.showClass);
     }
 
     componentDidLoad() {
+        this.convertDropdownItems()
+        this.setupPopper();
+    }
+
+    convertDropdownItems() {
         this.el.querySelectorAll('.ini-dropdown-menu > *').forEach(child => {
             if (child instanceof HTMLAnchorElement) {
                 child.classList.add('ini-dropdown-item');
@@ -46,15 +57,35 @@ export class IniDropdown {
         this.hideDropdown();
     }
 
+    setupPopper() {
+        this.popperInstance = createPopper(this.triggerElement, this.contentElement, {
+            placement: this.placement,
+            modifiers: [
+                {
+                    name: 'offset',
+                    options: {
+                        offset: ({ placement, reference}) => {
+                            if (placement === 'top') {
+                                return [0, (reference.height / 2) + 5];
+                            } else {
+                                return [0, 4];
+                            }
+                        },
+                    },
+                },
+            ]
+        });
+    }
+
     render() {
         return (
             <Host data-webcomponent={true}>
-                <div class="ini-dropdown" style={{display: 'inline'}}>
-                    <ini-button onIniClick={this.onTriggerClicked} extraClass="ini-dropdown-toggle" size={this.size}>
+                <div class="ini-dropdown">
+                    <ini-button onIniClick={this.onTriggerClicked} extraClass="ini-dropdown-toggle"
+                                size={this.size} ref={ref => this.triggerElement = ref}>
                         Dropdown button
                     </ini-button>
-                    <ul class="ini-dropdown-menu ini-dropdown-menu-start" data-bs-popper={true}
-                        ref={ref => this.contentElement = ref}>
+                    <ul class="ini-dropdown-menu" ref={ref => this.contentElement = ref}>
                         <slot/>
                     </ul>
                 </div>

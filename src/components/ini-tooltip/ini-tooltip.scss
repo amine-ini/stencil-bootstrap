@@ -1,0 +1,14 @@
+@import "../../../node_modules/bootstrap/scss/tooltip";
+
+ini-tooltip {
+    display: inline;
+
+    &:hover .ini-tooltip {
+        display: inline;
+    }
+
+    .ini-tooltip {
+        opacity: 1;
+        display: none;
+    }
+}

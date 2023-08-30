@@ -15,6 +15,8 @@ export class IniModal {
 
     @Prop() closeLabel: string;
 
+    @Prop() centerY: boolean = true;
+
     dialogElement: HTMLElement
 
     backdropCloseModal = (e) => {
@@ -32,11 +34,16 @@ export class IniModal {
             display: this.open ? 'block' : 'none'
         };
 
+        const dialogClass = {
+            'ini-modal-dialog': true,
+            'ini-modal-dialog-centered': this.centerY,
+        };
+
         return (
             <Host data-webcomponent={true}>
                 <div class="ini-modal-backdrop ini-show" style={style} onClick={this.backdropCloseModal}/>
                 <div class="ini-modal" style={style} onClick={this.backdropCloseModal}>
-                    <div class="ini-modal-dialog" ref={ref => this.dialogElement = ref}>
+                    <div class={dialogClass} ref={ref => this.dialogElement = ref}>
                         <div class="ini-modal-content">
                             <div class="ini-modal-header">
                                 <h5 class="ini-modal-title">{this.headerTitle}</h5>
@@ -46,8 +53,9 @@ export class IniModal {
                                 <slot/>
                             </div>
                             <div class="ini-modal-footer">
-                                <ini-button variant="secondary"
-                                            onIniClick={this.closeModal}>{this.closeLabel}</ini-button>
+                                <ini-button variant="secondary" onIniClick={this.closeModal}>
+                                    {this.closeLabel}
+                                </ini-button>
                             </div>
                         </div>
                     </div>
