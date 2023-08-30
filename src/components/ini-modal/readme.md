@@ -1,15 +1,15 @@
 # ini-modal
 
-
-
 <!-- Auto Generated Below -->
 
 
 ## Properties
 
-| Property | Attribute | Description | Type      | Default |
-| -------- | --------- | ----------- | --------- | ------- |
-| `open`   | `open`    |             | `boolean` | `false` |
+| Property      | Attribute      | Description | Type      | Default     |
+| ------------- | -------------- | ----------- | --------- | ----------- |
+| `closeLabel`  | `close-label`  |             | `string`  | `undefined` |
+| `headerTitle` | `header-title` |             | `string`  | `undefined` |
+| `open`        | `open`         |             | `boolean` | `false`     |
 
 
 ## Dependencies

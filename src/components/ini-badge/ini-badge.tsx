@@ -1,27 +1,27 @@
 import {Component, Host, h, Prop} from '@stencil/core';
 
 @Component({
-  tag: 'ini-badge',
-  styleUrl: 'ini-badge.scss',
-  shadow: false,
+    tag: 'ini-badge',
+    styleUrl: 'ini-badge.scss',
+    shadow: false,
 })
 export class IniBadge {
 
-  @Prop() variant: "primary"|"secondary"|"success"|"danger"|"warning"|"info" = "primary";
+    @Prop() variant: "primary" | "secondary" | "success" | "danger" | "warning" | "info" = "primary";
 
-  render() {
-    const classes = {
-      'ini-badge': true,
-      [`ini-text-bg-${this.variant}`]: true,
-    };
+    render() {
+        const classes = {
+            'ini-badge': true,
+            [`ini-text-bg-${this.variant}`]: true,
+        };
 
-    return (
-      <Host data-webcomponent={true}>
+        return (
+            <Host data-webcomponent={true}>
         <span class={classes}>
-          <slot />
+          <slot/>
         </span>
-      </Host>
-    );
-  }
+            </Host>
+        );
+    }
 
 }

@@ -1,49 +1,54 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0"/>
     <title>Stencil Component Starter</title>
 
     <!--<link rel="stylesheet" href="../www/build/stencil-bootstrap.css">-->
     <!--<script type="module" src="../www/build/stencil-bootstrap.esm.js"></script>-->
     <script type="module" src="/build/stencil-bootstrap.esm.js"></script>
     <link rel="stylesheet" href="/build/stencil-bootstrap.css">
-  </head>
-  <body>
-    <ini-card header-title="C'est le titre du card">
-      <p>
+</head>
+<body>
+<ini-card header-title="C'est le titre du card">
+    <p>
         <ini-button variant="danger" size="small">Un bouton 😄</ini-button>
         <ini-button variant="info">Un bouton 😄</ini-button>
         <ini-button variant="success" size="large">Un bouton 😄</ini-button>
         <ini-button disabled>Disabled 🙁</ini-button>
         <ini-button outline>Outline 🙄</ini-button>
-      </p>
-      <p>
+    </p>
+    <p>
         <ini-badge>primary</ini-badge>
         <ini-badge variant="danger">danger</ini-badge>
         <ini-badge variant="warning">danger</ini-badge>
-      </p>
-      <p>
+    </p>
+    <p>
         <ini-dropdown>
-          <a href="#">Action</a>
-          <a href="#">Another action</a>
-          <a href="#">Something else here</a>
+            <a href="#">Action</a>
+            <a href="#">Another action</a>
+            <a href="#">Something else here</a>
         </ini-dropdown>
         <ini-dropdown size="small">
-          <a href="#">Action</a>
-          <a href="#">Another action</a>
-          <a href="#">Something else here</a>
+            <a href="#">Action</a>
+            <a href="#">Another action</a>
+            <a href="#">Something else here</a>
         </ini-dropdown>
-      </p>
-    </ini-card>
+    </p>
+</ini-card>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid at fugiat maxime, minima minus mollitia natus
-      possimus quae veniam vitae!</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid at fugiat maxime, minima minus mollitia natus
+    possimus quae veniam vitae!</p>
 
-  <h1>toto</h1>
-  <h5>toto</h5>
+<h1>toto</h1>
+<h5>toto</h5>
 
-  <ini-modal open></ini-modal>
-  </body>
+<button></button>
+
+<ini-modal open header-title="Je suis une modal en Bootstrap & Stencil" close-label="Fermer">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias doloremque eligendi explicabo harum, illo maiores
+    minus nobis optio repudiandae vitae!
+</ini-modal>
+</body>
 </html>

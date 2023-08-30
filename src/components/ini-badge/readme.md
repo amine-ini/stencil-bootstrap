@@ -1,7 +1,5 @@
 # ini-badge
 
-
-
 <!-- Auto Generated Below -->
 
 

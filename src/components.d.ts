@@ -7,22 +7,24 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface IniBadge {
-        "variant": "primary"|"secondary"|"success"|"danger"|"warning"|"info";
+        "variant": "primary" | "secondary" | "success" | "danger" | "warning" | "info";
     }
     interface IniButton {
         "disabled": boolean;
         "extraClass": string;
         "outline": boolean;
-        "size": "small"|"medium"|"large";
-        "variant": "primary"|"secondary"|"success"|"danger"|"warning"|"info";
+        "size": "small" | "medium" | "large";
+        "variant": "primary" | "secondary" | "success" | "danger" | "warning" | "info";
     }
     interface IniCard {
         "headerTitle": string;
     }
     interface IniDropdown {
-        "size": "small"|"medium"|"large";
+        "size": "small" | "medium" | "large";
     }
     interface IniModal {
+        "closeLabel": string;
+        "headerTitle": string;
         "open": boolean;
     }
 }
@@ -71,23 +73,25 @@ declare global {
 }
 declare namespace LocalJSX {
     interface IniBadge {
-        "variant"?: "primary"|"secondary"|"success"|"danger"|"warning"|"info";
+        "variant"?: "primary" | "secondary" | "success" | "danger" | "warning" | "info";
     }
     interface IniButton {
         "disabled"?: boolean;
         "extraClass"?: string;
         "onIniClick"?: (event: IniButtonCustomEvent<any>) => void;
         "outline"?: boolean;
-        "size"?: "small"|"medium"|"large";
-        "variant"?: "primary"|"secondary"|"success"|"danger"|"warning"|"info";
+        "size"?: "small" | "medium" | "large";
+        "variant"?: "primary" | "secondary" | "success" | "danger" | "warning" | "info";
     }
     interface IniCard {
         "headerTitle"?: string;
     }
     interface IniDropdown {
-        "size"?: "small"|"medium"|"large";
+        "size"?: "small" | "medium" | "large";
     }
     interface IniModal {
+        "closeLabel"?: string;
+        "headerTitle"?: string;
         "open"?: boolean;
     }
     interface IntrinsicElements {
