@@ -1,0 +1,14 @@
+@import "../../../node_modules/bootstrap/scss/forms";
+
+ini-input {
+    &.ini-form-control-inline {
+        gap: $spacer;
+        display: flex;
+        align-items: center;
+
+        > * {
+            flex: 0 0 auto;
+            width: auto;
+        }
+    }
+}

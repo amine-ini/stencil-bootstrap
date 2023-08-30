@@ -28,6 +28,18 @@ export namespace Components {
         "placement": "top" | "bottom" | "right" | "left";
         "size": "small" | "medium" | "large";
     }
+    interface IniInput {
+        "disabled": boolean;
+        "groupId": string;
+        "helpText": string;
+        "inline": boolean;
+        "label": string;
+        "name": string;
+        "placeholder": string;
+        "size": "small" | "medium" | "large";
+        "type": "text" | "password" | "email" | "number" | "search" | "tel" | "url" | "color" | "file" | "textarea";
+        "value": string;
+    }
     interface IniModal {
         "centerY": boolean;
         "closeLabel": string;
@@ -74,6 +86,12 @@ declare global {
         prototype: HTMLIniDropdownElement;
         new (): HTMLIniDropdownElement;
     };
+    interface HTMLIniInputElement extends Components.IniInput, HTMLStencilElement {
+    }
+    var HTMLIniInputElement: {
+        prototype: HTMLIniInputElement;
+        new (): HTMLIniInputElement;
+    };
     interface HTMLIniModalElement extends Components.IniModal, HTMLStencilElement {
     }
     var HTMLIniModalElement: {
@@ -92,6 +110,7 @@ declare global {
         "ini-button": HTMLIniButtonElement;
         "ini-card": HTMLIniCardElement;
         "ini-dropdown": HTMLIniDropdownElement;
+        "ini-input": HTMLIniInputElement;
         "ini-modal": HTMLIniModalElement;
         "ini-tooltip": HTMLIniTooltipElement;
     }
@@ -120,6 +139,18 @@ declare namespace LocalJSX {
         "placement"?: "top" | "bottom" | "right" | "left";
         "size"?: "small" | "medium" | "large";
     }
+    interface IniInput {
+        "disabled"?: boolean;
+        "groupId"?: string;
+        "helpText"?: string;
+        "inline"?: boolean;
+        "label"?: string;
+        "name"?: string;
+        "placeholder"?: string;
+        "size"?: "small" | "medium" | "large";
+        "type"?: "text" | "password" | "email" | "number" | "search" | "tel" | "url" | "color" | "file" | "textarea";
+        "value"?: string;
+    }
     interface IniModal {
         "centerY"?: boolean;
         "closeLabel"?: string;
@@ -136,6 +167,7 @@ declare namespace LocalJSX {
         "ini-button": IniButton;
         "ini-card": IniCard;
         "ini-dropdown": IniDropdown;
+        "ini-input": IniInput;
         "ini-modal": IniModal;
         "ini-tooltip": IniTooltip;
     }
@@ -149,6 +181,7 @@ declare module "@stencil/core" {
             "ini-button": LocalJSX.IniButton & JSXBase.HTMLAttributes<HTMLIniButtonElement>;
             "ini-card": LocalJSX.IniCard & JSXBase.HTMLAttributes<HTMLIniCardElement>;
             "ini-dropdown": LocalJSX.IniDropdown & JSXBase.HTMLAttributes<HTMLIniDropdownElement>;
+            "ini-input": LocalJSX.IniInput & JSXBase.HTMLAttributes<HTMLIniInputElement>;
             "ini-modal": LocalJSX.IniModal & JSXBase.HTMLAttributes<HTMLIniModalElement>;
             "ini-tooltip": LocalJSX.IniTooltip & JSXBase.HTMLAttributes<HTMLIniTooltipElement>;
         }
