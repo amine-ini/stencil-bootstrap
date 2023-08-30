@@ -1,1 +1,5 @@
 @import "../../../node_modules/bootstrap/scss/dropdown";
+
+.ini-dropdown-menu[data-bs-popper] {
+  top: auto;
+}

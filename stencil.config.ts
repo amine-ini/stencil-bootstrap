@@ -18,7 +18,7 @@ export const config: Config = {
     }),
     postcss({
       plugins: [
-        prefixer({prefix: 'ini-'}),
+        prefixer({prefix: 'ini-', ignore: [/ini-/]}),
         PrefixWrap("[data-webcomponent]", {ignoredSelectors: [':root']})
       ]
     })
