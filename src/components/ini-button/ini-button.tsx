@@ -1,4 +1,4 @@
-import {Component, h, Host, Prop} from '@stencil/core';
+import {Component, Event, EventEmitter, h, Host, Prop} from '@stencil/core';
 
 @Component({
   tag: 'ini-button',
@@ -15,6 +15,10 @@ export class IniButton {
 
   @Prop() disabled: boolean = false;
 
+  @Prop() extraClass: string = "";
+
+  @Event() iniClick: EventEmitter;
+
   render() {
     const classes = {
       'ini-btn': true,
@@ -22,11 +26,12 @@ export class IniButton {
       [`ini-btn-outline-${this.variant}`]: this.outline,
       'ini-btn-sm': this.size === "small",
       'ini-btn-lg': this.size === "large",
+      [this.extraClass]: this.extraClass.length > 0
     };
 
     return (
       <Host data-webcomponent={true}>
-        <button class={classes} disabled={this.disabled}>
+        <button class={classes} disabled={this.disabled} onClick={e => this.iniClick.emit(e)}>
           <slot/>
         </button>
       </Host>

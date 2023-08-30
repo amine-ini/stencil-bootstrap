@@ -11,6 +11,7 @@ export namespace Components {
     }
     interface IniButton {
         "disabled": boolean;
+        "extraClass": string;
         "outline": boolean;
         "size": "small"|"medium"|"large";
         "variant": "primary"|"secondary"|"success"|"danger"|"warning"|"info";
@@ -19,7 +20,12 @@ export namespace Components {
         "headerTitle": string;
     }
     interface IniDropdown {
+        "size": "small"|"medium"|"large";
     }
+}
+export interface IniButtonCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLIniButtonElement;
 }
 declare global {
     interface HTMLIniBadgeElement extends Components.IniBadge, HTMLStencilElement {
@@ -59,6 +65,8 @@ declare namespace LocalJSX {
     }
     interface IniButton {
         "disabled"?: boolean;
+        "extraClass"?: string;
+        "onIniClick"?: (event: IniButtonCustomEvent<any>) => void;
         "outline"?: boolean;
         "size"?: "small"|"medium"|"large";
         "variant"?: "primary"|"secondary"|"success"|"danger"|"warning"|"info";
@@ -67,6 +75,7 @@ declare namespace LocalJSX {
         "headerTitle"?: string;
     }
     interface IniDropdown {
+        "size"?: "small"|"medium"|"large";
     }
     interface IntrinsicElements {
         "ini-badge": IniBadge;
