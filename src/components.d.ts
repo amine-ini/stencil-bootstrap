@@ -7,6 +7,9 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface IniAlert {
+        "dismissible": boolean;
+        "headerTitle": string;
+        "variant": "primary" | "secondary" | "success" | "danger" | "warning" | "info";
     }
     interface IniBadge {
         "variant": "primary" | "secondary" | "success" | "danger" | "warning" | "info";
@@ -95,6 +98,9 @@ declare global {
 }
 declare namespace LocalJSX {
     interface IniAlert {
+        "dismissible"?: boolean;
+        "headerTitle"?: string;
+        "variant"?: "primary" | "secondary" | "success" | "danger" | "warning" | "info";
     }
     interface IniBadge {
         "variant"?: "primary" | "secondary" | "success" | "danger" | "warning" | "info";
