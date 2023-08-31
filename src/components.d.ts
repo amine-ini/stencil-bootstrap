@@ -36,7 +36,11 @@ export namespace Components {
         "label": string;
         "name": string;
         "placeholder": string;
+        "prefixIcon": string;
+        "prefixText": string;
         "size": "small" | "medium" | "large";
+        "suffixIcon": string;
+        "suffixText": string;
         "type": "text" | "password" | "email" | "number" | "search" | "tel" | "url" | "color" | "file" | "textarea";
         "value": string;
     }
@@ -47,6 +51,11 @@ export namespace Components {
         "open": boolean;
     }
     interface IniSelect {
+        "allowEmpty": boolean;
+        "disabled": boolean;
+        "multiple": boolean;
+        "name": string;
+        "placeholder": string;
     }
     interface IniTooltip {
         "placement": "top" | "bottom" | "right" | "left";
@@ -156,7 +165,11 @@ declare namespace LocalJSX {
         "label"?: string;
         "name"?: string;
         "placeholder"?: string;
+        "prefixIcon"?: string;
+        "prefixText"?: string;
         "size"?: "small" | "medium" | "large";
+        "suffixIcon"?: string;
+        "suffixText"?: string;
         "type"?: "text" | "password" | "email" | "number" | "search" | "tel" | "url" | "color" | "file" | "textarea";
         "value"?: string;
     }
@@ -167,6 +180,11 @@ declare namespace LocalJSX {
         "open"?: boolean;
     }
     interface IniSelect {
+        "allowEmpty"?: boolean;
+        "disabled"?: boolean;
+        "multiple"?: boolean;
+        "name"?: string;
+        "placeholder"?: string;
     }
     interface IniTooltip {
         "placement"?: "top" | "bottom" | "right" | "left";

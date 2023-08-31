@@ -1,3 +1,5 @@
+$input-group-addon-bg: $body-bg;
+
 @import "~bootstrap/scss/forms";
 
 ini-input {
@@ -13,6 +15,13 @@ ini-input {
 
         .ini-form-label {
             margin-bottom: 0;
+        }
+    }
+
+    .input-group {
+        .form-control {
+            border-left: 0;
+            border-right: 0;
         }
     }
 }
