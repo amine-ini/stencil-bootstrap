@@ -29,6 +29,7 @@
     "@popperjs/core": "^2.11.8",
     "@stencil/core": "^4.0.0",
     "bootstrap": "^5.3.1",
+    "postcss-prefix-selector": "^1.16.0",
     "tom-select": "^2.2.2"
   },
   "devDependencies": {

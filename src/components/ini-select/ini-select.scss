@@ -1,1 +1,5 @@
-@import "~tom-select/dist/css/tom-select.bootstrap5.min.css"; // todo : check for sass...
+$select-color-dropdown-border-top: red;
+$select-color-dropdown: $body-bg;
+$input-border-width: $border-width;
+
+@import "~tom-select/dist/scss/tom-select.bootstrap5";
