@@ -16,7 +16,11 @@
 | `label`       | `label`       |             | `string`                                                                                                       | `""`       |
 | `name`        | `name`        |             | `string`                                                                                                       | `""`       |
 | `placeholder` | `placeholder` |             | `string`                                                                                                       | `""`       |
+| `prefixIcon`  | `prefix-icon` |             | `string`                                                                                                       | `""`       |
+| `prefixText`  | `prefix-text` |             | `string`                                                                                                       | `""`       |
 | `size`        | `size`        |             | `"large" \| "medium" \| "small"`                                                                               | `"medium"` |
+| `suffixIcon`  | `suffix-icon` |             | `string`                                                                                                       | `""`       |
+| `suffixText`  | `suffix-text` |             | `string`                                                                                                       | `""`       |
 | `type`        | `type`        |             | `"color" \| "email" \| "file" \| "number" \| "password" \| "search" \| "tel" \| "text" \| "textarea" \| "url"` | `"text"`   |
 | `value`       | `value`       |             | `string`                                                                                                       | `""`       |
 
