@@ -32,10 +32,12 @@
     "@stencil/core": "^4.0.0",
     "bootstrap": "^5.3.1",
     "postcss-prefix-selector": "^1.16.0",
+    "sortablejs": "^1.15.0",
     "tom-select": "^2.2.2"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.14",
+    "@pxtrn/storybook-addon-docs-stencil": "^6.4.1",
     "@stencil-community/postcss": "^2.2.0",
     "@stencil/sass": "^3.0.5",
     "@storybook/addon-essentials": "^7.4.0",

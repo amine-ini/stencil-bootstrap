@@ -16,6 +16,10 @@ export const config: Config = {
     outputTargets: [
         {
             type: 'www'
+        },
+        {
+            type: 'docs-json',
+            file: 'docs/docs.json'
         }
     ],
     plugins: [
