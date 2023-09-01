@@ -1,5 +1,5 @@
 @import "~bootstrap/scss/buttons";
 
-ini-button {
+ini-button[data-webcomponent] {
     display: inline-block;
 }

@@ -29,7 +29,7 @@ export const config: Config = {
         postcss({
             plugins: [
                 prefixerClass({prefix: iniPrefix, ignore: [/ini-/]}),
-                PrefixWrap("[data-webcomponent]", {ignoredSelectors: [':root']}),
+                PrefixWrap("[data-webcomponent]", {ignoredSelectors: [':root', /^ini-(.+)$/]}),
                 prefixSelector({
                     prefix: '',
                     transform: (_, selector) => {

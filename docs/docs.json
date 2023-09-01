@@ -1,5 +1,5 @@
 {
-  "timestamp": "2023-09-01T16:14:29",
+  "timestamp": "2023-09-01T20:46:07",
   "compiler": {
     "name": "@stencil/core",
     "version": "4.1.0",
@@ -10,7 +10,7 @@
       "filePath": "src/components/ini-alert/ini-alert.tsx",
       "encapsulation": "none",
       "tag": "ini-alert",
-      "readme": "# ini-alert\r\n\r\n\r\n\r",
+      "readme": "# ini-alert\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -116,7 +116,7 @@
       "filePath": "src/components/ini-badge/ini-badge.tsx",
       "encapsulation": "none",
       "tag": "ini-badge",
-      "readme": "# ini-badge\r\n\r",
+      "readme": "# ini-badge\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -179,7 +179,7 @@
       "filePath": "src/components/ini-button/ini-button.tsx",
       "encapsulation": "none",
       "tag": "ini-button",
-      "readme": "# ini-button\r\n\r",
+      "readme": "# ini-button\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -364,7 +364,7 @@
       "filePath": "src/components/ini-card/ini-card.tsx",
       "encapsulation": "none",
       "tag": "ini-card",
-      "readme": "# ini-card\r\n\r",
+      "readme": "# ini-card\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -405,11 +405,77 @@
       "filePath": "src/components/ini-dropdown/ini-dropdown.tsx",
       "encapsulation": "none",
       "tag": "ini-dropdown",
-      "readme": "# ini-dropdown\r\n\r",
+      "readme": "# ini-dropdown\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
       "props": [
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "complexType": {
+            "original": "boolean",
+            "resolved": "boolean",
+            "references": {}
+          },
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "complexType": {
+            "original": "string",
+            "resolved": "string",
+            "references": {}
+          },
+          "mutable": false,
+          "attr": "label",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "\"\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "outline",
+          "type": "boolean",
+          "complexType": {
+            "original": "boolean",
+            "resolved": "boolean",
+            "references": {}
+          },
+          "mutable": false,
+          "attr": "outline",
+          "reflectToAttr": false,
+          "docs": "",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
         {
           "name": "placement",
           "type": "\"bottom\" | \"left\" | \"right\" | \"top\"",
@@ -504,7 +570,7 @@
       "filePath": "src/components/ini-input/ini-input.tsx",
       "encapsulation": "none",
       "tag": "ini-input",
-      "readme": "# ini-input\r\n\r\n\r\n\r",
+      "readme": "# ini-input\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -542,7 +608,7 @@
           "mutable": true,
           "attr": "group-id",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The id value for input and label attributes",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -878,7 +944,7 @@
       "filePath": "src/components/ini-modal/ini-modal.tsx",
       "encapsulation": "none",
       "tag": "ini-modal",
-      "readme": "# ini-modal\r\n\r",
+      "readme": "# ini-modal\n",
       "docs": "",
       "docsTags": [],
       "usage": {},
@@ -990,8 +1056,8 @@
       "filePath": "src/components/ini-select/ini-select.tsx",
       "encapsulation": "none",
       "tag": "ini-select",
-      "readme": "# ini-select\r\n\r\n\r\n\r",
-      "docs": "",
+      "readme": "# ini-select\n\n\n",
+      "docs": "Select control",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -1120,7 +1186,7 @@
       "filePath": "src/components/ini-tooltip/ini-tooltip.tsx",
       "encapsulation": "none",
       "tag": "ini-tooltip",
-      "readme": "# ini-tooltip\r\n\r\n\r\n\r",
+      "readme": "# ini-tooltip\n\n\n",
       "docs": "",
       "docsTags": [],
       "usage": {},

@@ -9,7 +9,13 @@ import {createPopper, Instance} from "@popperjs/core";
 export class IniDropdown {
     @Element() el: HTMLElement;
 
+    @Prop() label: string = "";
+
     @Prop() size: "small" | "medium" | "large" = "medium";
+
+    @Prop() outline: boolean = false;
+
+    @Prop() disabled: boolean = false;
 
     @Prop() placement: "top" | "bottom" | "right" | "left" = "bottom";
 
@@ -42,7 +48,7 @@ export class IniDropdown {
 
     convertDropdownItems() {
         this.el.querySelectorAll('.ini-dropdown-menu > *').forEach(child => {
-            if (child instanceof HTMLAnchorElement) {
+            if (child instanceof HTMLElement) {
                 child.classList.add('ini-dropdown-item');
                 child.addEventListener('click', _ => this.hideDropdown())
             }
@@ -82,8 +88,9 @@ export class IniDropdown {
             <Host data-webcomponent={true}>
                 <div class="ini-dropdown">
                     <ini-button onIniClick={this.onTriggerClicked} extraClass="ini-dropdown-toggle"
-                                size={this.size} ref={ref => this.triggerElement = ref}>
-                        Dropdown button
+                                size={this.size} outline={this.outline} disabled={this.disabled}
+                                ref={ref => this.triggerElement = ref}>
+                        {this.label}
                     </ini-button>
                     <ul class="ini-dropdown-menu" ref={ref => this.contentElement = ref}>
                         <slot/>

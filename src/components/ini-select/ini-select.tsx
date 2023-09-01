@@ -1,6 +1,9 @@
 import {Component, Host, h, Prop} from '@stencil/core';
 import TomSelect from "tom-select";
 
+/**
+ * Select control
+ */
 @Component({
     tag: 'ini-select',
     styleUrl: 'ini-select.scss',

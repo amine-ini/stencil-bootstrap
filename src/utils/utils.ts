@@ -1,10 +1,13 @@
+export function parseArgs(args = {}) {
+    return Object.keys(args)
+        .map(key => `${key.replace(/[A-Z]/g, m => "-" + m.toLowerCase())}="${args[key]}"`)
+        .join(' ');
+}
+
 export function getRenderComponent(tag) {
     return {
         render: ({children = '', ...args}) => {
-            const attributes = Object.keys(args) // convert camelcase to dash case
-                .map(key => `${key.replace(/[A-Z]/g, m => "-" + m.toLowerCase())}="${args[key]}"`)
-                .join(' ');
-            return `<${tag} ${attributes}>${children}</${tag}>`;
+            return `<${tag} ${parseArgs(args)}>${children}</${tag}>`;
         }
     }
 }

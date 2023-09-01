@@ -1,3 +1,7 @@
 Il faut englober chaque composant avec <Host data-webcomponent={true}>
 C'est ce qui va permettre que le style Bootstrap fonctionne sur les web components,
 Sans ça, le style ne sera pas appliqué.
+
+Si dans le SCSS un element <Host> est ajouté alors rajouté l'attribut après,
+pour bien cibler le style exemple : ini-button[data-webcomponent] // le style ensuite
+Eviter de juste utiliser ini-button //...

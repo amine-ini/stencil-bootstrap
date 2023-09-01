@@ -25,11 +25,17 @@ export namespace Components {
         "headerTitle": string;
     }
     interface IniDropdown {
+        "disabled": boolean;
+        "label": string;
+        "outline": boolean;
         "placement": "top" | "bottom" | "right" | "left";
         "size": "small" | "medium" | "large";
     }
     interface IniInput {
         "disabled": boolean;
+        /**
+          * The id value for input and label attributes
+         */
         "groupId": string;
         "helpText": string;
         "inline": boolean;
@@ -50,6 +56,9 @@ export namespace Components {
         "headerTitle": string;
         "open": boolean;
     }
+    /**
+     * Select control
+     */
     interface IniSelect {
         "allowEmpty": boolean;
         "disabled": boolean;
@@ -109,6 +118,9 @@ declare global {
         prototype: HTMLIniModalElement;
         new (): HTMLIniModalElement;
     };
+    /**
+     * Select control
+     */
     interface HTMLIniSelectElement extends Components.IniSelect, HTMLStencilElement {
     }
     var HTMLIniSelectElement: {
@@ -154,11 +166,17 @@ declare namespace LocalJSX {
         "headerTitle"?: string;
     }
     interface IniDropdown {
+        "disabled"?: boolean;
+        "label"?: string;
+        "outline"?: boolean;
         "placement"?: "top" | "bottom" | "right" | "left";
         "size"?: "small" | "medium" | "large";
     }
     interface IniInput {
         "disabled"?: boolean;
+        /**
+          * The id value for input and label attributes
+         */
         "groupId"?: string;
         "helpText"?: string;
         "inline"?: boolean;
@@ -179,6 +197,9 @@ declare namespace LocalJSX {
         "headerTitle"?: string;
         "open"?: boolean;
     }
+    /**
+     * Select control
+     */
     interface IniSelect {
         "allowEmpty"?: boolean;
         "disabled"?: boolean;
@@ -213,6 +234,9 @@ declare module "@stencil/core" {
             "ini-dropdown": LocalJSX.IniDropdown & JSXBase.HTMLAttributes<HTMLIniDropdownElement>;
             "ini-input": LocalJSX.IniInput & JSXBase.HTMLAttributes<HTMLIniInputElement>;
             "ini-modal": LocalJSX.IniModal & JSXBase.HTMLAttributes<HTMLIniModalElement>;
+            /**
+             * Select control
+             */
             "ini-select": LocalJSX.IniSelect & JSXBase.HTMLAttributes<HTMLIniSelectElement>;
             "ini-tooltip": LocalJSX.IniTooltip & JSXBase.HTMLAttributes<HTMLIniTooltipElement>;
         }

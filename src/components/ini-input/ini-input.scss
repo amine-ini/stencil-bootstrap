@@ -8,20 +8,26 @@ ini-input {
         display: flex;
         align-items: center;
 
-        > * {
-            flex: 0 0 auto;
-            width: auto;
-        }
-
         .ini-form-label {
             margin-bottom: 0;
+            flex-shrink: 0;
+        }
+
+        .ini-form-control {
+            flex: 1;
         }
     }
 
     .input-group {
-        .form-control {
-            border-left: 0;
-            border-right: 0;
+        &-has-prefix {
+            .form-control {
+                border-left: 0;
+            }
+        }
+        &-has-suffix {
+            .form-control {
+                border-right: 0;
+            }
         }
     }
 }

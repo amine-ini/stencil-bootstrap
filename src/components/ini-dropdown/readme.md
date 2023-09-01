@@ -7,6 +7,9 @@
 
 | Property    | Attribute   | Description | Type                                     | Default    |
 | ----------- | ----------- | ----------- | ---------------------------------------- | ---------- |
+| `disabled`  | `disabled`  |             | `boolean`                                | `false`    |
+| `label`     | `label`     |             | `string`                                 | `""`       |
+| `outline`   | `outline`   |             | `boolean`                                | `false`    |
 | `placement` | `placement` |             | `"bottom" \| "left" \| "right" \| "top"` | `"bottom"` |
 | `size`      | `size`      |             | `"large" \| "medium" \| "small"`         | `"medium"` |
 

@@ -1,0 +1,18 @@
+import {getRenderComponent} from "../../utils/utils";
+
+const tagName = 'ini-input';
+
+export default {
+    title: 'Core/ini-input',
+    component: tagName,
+    ...getRenderComponent(tagName)
+};
+
+export const Primary = {
+    args: {
+        suffixIcon: 'fa-solid fa-home',
+        label: 'We need you informations',
+        placeholder: 'This an input placeholder',
+        helpText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+    },
+};

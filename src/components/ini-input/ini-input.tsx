@@ -13,6 +13,7 @@ export class IniInput {
 
     @Prop() type: "text" | "password" | "email" | "number" | "search" | "tel" | "url" | "color" | "file" | "textarea" = "text";
 
+    /** The id value for input and label attributes */
     @Prop({mutable: true}) groupId: string = "";
 
     @Prop() label: string = "";
@@ -83,7 +84,10 @@ export class IniInput {
             'ini-input-group': true,
             'ini-input-group-sm': this.size === "small",
             'ini-input-group-lg': this.size === "large",
+            'ini-input-group-has-prefix': this.prefixText.length > 0 || this.prefixIcon.length > 0,
+            'ini-input-group-has-suffix': this.suffixText.length > 0 || this.suffixIcon.length > 0
         };
+
         return (
             <div class={classes}>
                 {this.prefixText && this.getInputGroupChildElement(this.prefixText)}

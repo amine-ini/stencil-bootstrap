@@ -1,6 +1,6 @@
 @import "~bootstrap/scss/tooltip";
 
-ini-tooltip {
+ini-tooltip[data-webcomponent] {
     display: inline;
 
     &:hover .ini-tooltip {
