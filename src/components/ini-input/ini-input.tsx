@@ -1,4 +1,4 @@
-import {Component, Host, h, Prop} from '@stencil/core';
+import {Component, Host, h, Prop, Method} from '@stencil/core';
 
 @Component({
     tag: 'ini-input',
@@ -37,6 +37,11 @@ export class IniInput {
     @Prop() prefixIcon: string = "";
 
     @Prop() suffixIcon: string = "";
+
+    @Method()
+    async getInputRef(): Promise<HTMLElement> {
+        return this.inputElement;
+    }
 
     inputElement: HTMLInputElement
 

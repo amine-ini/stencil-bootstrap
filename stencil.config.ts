@@ -7,7 +7,8 @@ import prefixSelector from 'postcss-prefix-selector';
 
 const iniPrefix = 'ini-';
 const protectedRules = [
-    'ts-' // for TomSelect => ini-select
+    'ts-', // for TomSelect => ini-select
+    'datepicker' // for vanilla-datepicker => ini-date-picker
 ]
 
 export const config: Config = {

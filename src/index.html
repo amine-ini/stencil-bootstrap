@@ -12,72 +12,84 @@
     <script src="https://kit.fontawesome.com/0bf1825f8b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<ini-card header-title="C'est le titre du card">
-    <p>
+<p>
+    <ini-card header-title="C'est le titre du card">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. At aut, eius hic iste magni mollitia optio placeat quam sed velit.
         <ini-button variant="danger" size="small">Un bouton 😄</ini-button>
-        <ini-button variant="info">Un bouton 😄</ini-button>
-        <ini-button variant="success" size="large" onclick="document.querySelector('ini-modal').open=true">Open the modal</ini-button>
-        <ini-button disabled>Disabled 🙁</ini-button>
-        <ini-button outline>Outline 🙄</ini-button>
-    </p>
-    <p>
-        <ini-badge>primary</ini-badge>
-        <ini-badge variant="danger">danger</ini-badge>
+    </ini-card>
+</p>
+<p>
+    <ini-button variant="danger" size="small">Un bouton 😄</ini-button>
+    <ini-button variant="info">Un bouton 😄</ini-button>
+    <ini-button variant="success" size="large" onclick="document.querySelector('ini-modal').open=true">Open the modal</ini-button>
+    <ini-button disabled>Disabled 🙁</ini-button>
+    <ini-button outline>Outline 🙄</ini-button>
+</p>
+<p>
+    <ini-badge>primary</ini-badge>
+    <ini-badge variant="danger">danger</ini-badge>
+    <ini-badge variant="warning">danger</ini-badge>
+</p>
+<p>
+    <ini-dropdown label="Dropdown">
+        <a href="#">Action</a>
+        <a href="#">Another action</a>
+        <a href="#">Something else here</a>
+    </ini-dropdown>
+    <ini-dropdown size="small" placement="right" label="Dropdown">
+        <a href="#">Action</a>
+        <a href="#">Another action</a>
+        <a href="#">Something else here</a>
+    </ini-dropdown>
+</p>
+<p>
+    <ini-tooltip placement="right" title-content="Ici un tooltip">Afficher un tooltip à droite</ini-tooltip>
+    <ini-tooltip title-content="Ici un tooltip">
         <ini-badge variant="warning">danger</ini-badge>
-    </p>
-    <p>
-        <ini-dropdown label="Dropdown">
-            <a href="#">Action</a>
-            <a href="#">Another action</a>
-            <a href="#">Something else here</a>
-        </ini-dropdown>
-        <ini-dropdown size="small" placement="right" label="Dropdown">
-            <a href="#">Action</a>
-            <a href="#">Another action</a>
-            <a href="#">Something else here</a>
-        </ini-dropdown>
-    </p>
-    <p>
-        <ini-tooltip placement="right" title-content="Ici un tooltip">Afficher un tooltip à droite</ini-tooltip>
-        <ini-tooltip title-content="Ici un tooltip">
-            <ini-badge variant="warning">danger</ini-badge>
-        </ini-tooltip>
-    </p>
-    <p>
-        <ini-alert dismissible>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores odio perferendis unde voluptas! Dolor nobis officia perferendis voluptatem. A debitis dicta dolores et exercitationem iure iusto nulla perspiciatis unde ut! A, dolorem error esse ex inventore magni officia saepe sed?
-        </ini-alert>
-        <ini-alert variant="danger" header-title="C'est un header title">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores odio perferendis unde voluptas! Dolor nobis officia perferendis voluptatem. A debitis dicta dolores et exercitationem iure iusto nulla perspiciatis unde ut! A, dolorem error esse ex inventore magni officia saepe sed?
-        </ini-alert>
-    </p>
-    <div style="display: flex; gap: 20px;margin-bottom: 15px;">
-        <div style="flex:1">
-            <ini-input label="Numéro de téléphone" prefix-icon="fa-solid fa-house" suffix-icon="fa-solid fa-user"></ini-input>
-            <ini-input label="Nom et prénom" value="Jean Dupont" help-text="Veuillez saisir le nom et prénom"></ini-input>
-            <ini-input label="Message" value="Bonjour," type="textarea"></ini-input>
+    </ini-tooltip>
+</p>
+<p>
+    <ini-alert dismissible>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores odio perferendis unde voluptas! Dolor nobis officia perferendis voluptatem. A debitis dicta dolores et exercitationem iure iusto nulla perspiciatis unde ut! A, dolorem error esse ex inventore magni officia saepe sed?
+    </ini-alert>
+    <ini-alert variant="danger" header-title="C'est un header title">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores odio perferendis unde voluptas! Dolor nobis officia perferendis voluptatem. A debitis dicta dolores et exercitationem iure iusto nulla perspiciatis unde ut! A, dolorem error esse ex inventore magni officia saepe sed?
+    </ini-alert>
+</p>
+<div style="display: flex; gap: 20px;margin-bottom: 15px;">
+    <div style="flex:1">
+        <ini-input label="Numéro de téléphone" prefix-icon="fa-solid fa-house" suffix-icon="fa-solid fa-user"></ini-input>
+        <ini-input label="Nom et prénom" value="Jean Dupont" help-text="Veuillez saisir le nom et prénom"></ini-input>
+        <ini-input label="Message" value="Bonjour," type="textarea"></ini-input>
+    </div>
+    <div style="flex:1">
+        <div style="margin-bottom: 10px;">
+            <ini-input placeholder="Un champ petit" size="small"></ini-input>
         </div>
-        <div style="flex:1">
-            <div style="margin-bottom: 10px;">
-                <ini-input placeholder="Un champ petit" size="small"></ini-input>
-            </div>
-            <div style="margin-bottom: 10px;">
-                <ini-input placeholder="Un champ grand" size="large"></ini-input>
-            </div>
-            <div style="margin-bottom: 10px;">
-                <ini-input inline="true" label="Nom et prénom" value="Jean Dupont" help-text="Veuillez saisir le nom et prénom"></ini-input>
-            </div>
+        <div style="margin-bottom: 10px;">
+            <ini-input placeholder="Un champ grand" size="large"></ini-input>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <ini-input inline="true" label="Nom et prénom" value="Jean Dupont" help-text="Veuillez saisir le nom et prénom"></ini-input>
         </div>
     </div>
-    <p>
-        <ini-select placeholder="Select an option" multiple>
-            <option value="apple">Apple</option>
-            <option value="banana">Banana</option>
-            <option value="cherry">Cherry</option>
-            <option value="grape">Grape</option>
-        </ini-select>
-    </p>
-</ini-card>
+</div>
+<p>
+    <ini-select placeholder="Select an option" multiple>
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+        <option value="cherry">Cherry</option>
+        <option value="grape">Grape</option>
+    </ini-select>
+</p>
+<div style="display: flex; gap: 20px;margin-bottom: 15px;">
+    <div style="flex: 1">
+        <ini-date-picker></ini-date-picker>
+    </div>
+    <div style="flex: 1">
+        <ini-date-range-picker label="Selectionner un aller-retour"></ini-date-range-picker>
+    </div>
+</div>
 
 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid at fugiat maxime, minima minus mollitia natus
     possimus quae veniam vitae!</p>

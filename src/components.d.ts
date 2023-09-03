@@ -24,6 +24,33 @@ export namespace Components {
     interface IniCard {
         "headerTitle": string;
     }
+    /**
+     * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
+     */
+    interface IniDatePicker {
+        "dateFormat": string;
+        "disabled": boolean;
+        "helpText": string;
+        "label": string;
+        "name": string;
+        "placeholder": string;
+        "value": string;
+    }
+    /**
+     * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
+     */
+    interface IniDateRangePicker {
+        "dateFormat": string;
+        "disabled": boolean;
+        "endName": string;
+        "endPlaceholder": string;
+        "endValue": string;
+        "helpText": string;
+        "label": string;
+        "startName": string;
+        "startPlaceholder": string;
+        "startValue": string;
+    }
     interface IniDropdown {
         "disabled": boolean;
         "label": string;
@@ -33,6 +60,7 @@ export namespace Components {
     }
     interface IniInput {
         "disabled": boolean;
+        "getInputRef": () => Promise<HTMLElement>;
         /**
           * The id value for input and label attributes
          */
@@ -100,6 +128,24 @@ declare global {
         prototype: HTMLIniCardElement;
         new (): HTMLIniCardElement;
     };
+    /**
+     * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
+     */
+    interface HTMLIniDatePickerElement extends Components.IniDatePicker, HTMLStencilElement {
+    }
+    var HTMLIniDatePickerElement: {
+        prototype: HTMLIniDatePickerElement;
+        new (): HTMLIniDatePickerElement;
+    };
+    /**
+     * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
+     */
+    interface HTMLIniDateRangePickerElement extends Components.IniDateRangePicker, HTMLStencilElement {
+    }
+    var HTMLIniDateRangePickerElement: {
+        prototype: HTMLIniDateRangePickerElement;
+        new (): HTMLIniDateRangePickerElement;
+    };
     interface HTMLIniDropdownElement extends Components.IniDropdown, HTMLStencilElement {
     }
     var HTMLIniDropdownElement: {
@@ -138,6 +184,8 @@ declare global {
         "ini-badge": HTMLIniBadgeElement;
         "ini-button": HTMLIniButtonElement;
         "ini-card": HTMLIniCardElement;
+        "ini-date-picker": HTMLIniDatePickerElement;
+        "ini-date-range-picker": HTMLIniDateRangePickerElement;
         "ini-dropdown": HTMLIniDropdownElement;
         "ini-input": HTMLIniInputElement;
         "ini-modal": HTMLIniModalElement;
@@ -164,6 +212,33 @@ declare namespace LocalJSX {
     }
     interface IniCard {
         "headerTitle"?: string;
+    }
+    /**
+     * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
+     */
+    interface IniDatePicker {
+        "dateFormat"?: string;
+        "disabled"?: boolean;
+        "helpText"?: string;
+        "label"?: string;
+        "name"?: string;
+        "placeholder"?: string;
+        "value"?: string;
+    }
+    /**
+     * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
+     */
+    interface IniDateRangePicker {
+        "dateFormat"?: string;
+        "disabled"?: boolean;
+        "endName"?: string;
+        "endPlaceholder"?: string;
+        "endValue"?: string;
+        "helpText"?: string;
+        "label"?: string;
+        "startName"?: string;
+        "startPlaceholder"?: string;
+        "startValue"?: string;
     }
     interface IniDropdown {
         "disabled"?: boolean;
@@ -216,6 +291,8 @@ declare namespace LocalJSX {
         "ini-badge": IniBadge;
         "ini-button": IniButton;
         "ini-card": IniCard;
+        "ini-date-picker": IniDatePicker;
+        "ini-date-range-picker": IniDateRangePicker;
         "ini-dropdown": IniDropdown;
         "ini-input": IniInput;
         "ini-modal": IniModal;
@@ -231,6 +308,14 @@ declare module "@stencil/core" {
             "ini-badge": LocalJSX.IniBadge & JSXBase.HTMLAttributes<HTMLIniBadgeElement>;
             "ini-button": LocalJSX.IniButton & JSXBase.HTMLAttributes<HTMLIniButtonElement>;
             "ini-card": LocalJSX.IniCard & JSXBase.HTMLAttributes<HTMLIniCardElement>;
+            /**
+             * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
+             */
+            "ini-date-picker": LocalJSX.IniDatePicker & JSXBase.HTMLAttributes<HTMLIniDatePickerElement>;
+            /**
+             * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
+             */
+            "ini-date-range-picker": LocalJSX.IniDateRangePicker & JSXBase.HTMLAttributes<HTMLIniDateRangePickerElement>;
             "ini-dropdown": LocalJSX.IniDropdown & JSXBase.HTMLAttributes<HTMLIniDropdownElement>;
             "ini-input": LocalJSX.IniInput & JSXBase.HTMLAttributes<HTMLIniInputElement>;
             "ini-modal": LocalJSX.IniModal & JSXBase.HTMLAttributes<HTMLIniModalElement>;

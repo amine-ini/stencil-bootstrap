@@ -1,0 +1,40 @@
+@import "~bootstrap/scss/buttons";
+@import "~vanillajs-datepicker/sass/datepicker-bs5";
+
+:root {
+    --#{$prefix}date-range-picker-arrow-bg: var(--#{$prefix}secondary-bg);
+}
+
+ini-date-range-picker[data-webcomponent] {
+    .ini-date-range-picker__fields {
+        display: flex;
+
+        > ini-input {
+            flex: 1;
+
+            &:first-child {
+                z-index: 1;
+                .ini-form-control {
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+            }
+
+            &:last-child {
+                .ini-form-control {
+                    border-top-left-radius: 0;
+                    border-bottom-left-radius: 0;
+                }
+            }
+        }
+
+        > span.ini-date-range-picker__arrow {
+            width: 30px;
+            background: var(--#{$prefix}date-range-picker-arrow-bg);
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAMAAABrrFhUAAAAA3NCSVQICAjb4U/gAAAACXBIWXMAAHCGAABwhgH3zGbXAAAAGXRFWHRTb2Z0d2FyZQB3d3cuaW5rc2NhcGUub3Jnm+48GgAAAThQTFRF////HiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdHiAdhgcofwAAAGd0Uk5TAAEDBAUGBwkNDxEWFxgdKzE2Nzg5PUBBQ0tQUlhobm94eXp7fH1+f4CBgoOEhYaHiImKi4yNjo+QkZKTlJWWl5mfoKmrrq+wsbKztLW6yMrL0dXY2tvi4+Tm5+nq7O3w8ff4+fv9/nplPBcAAAJUSURBVHja7dxXTlBRGEXh30ZRVETBgh1FsHdRsWDHjqiIBayc+c/AB6OSwAM+mbC/NYO1klvOzc2uAgAAAAAAAAAAAAAAAADgP9I/+uT9u0fD20L1uyfaLxbGOhP9B2baH6Z78/x75toi5vviAtxvLbrAYGvZBe608AJTLbtAx/eWXaBroYUXeN3CC9xt4QX2tfACa1+kF9j6Lb3A/pZe4KACCiiggAIKxBc4pIACCiiggAIKxBc4rIACCiiggAIKKBBfYEgBBRRQQAEFFIgvcEQBBRRQQAEFFIgvcFQBBRRQQAEFFIgvMKyAAgoooIACCigQX+CYAgoooIACCqy4wPqezauSmysqsPf2y68tjb8FtjxrkfwusPtzC2W+t6qq51OLZbqzlmwWZjFWtSvZvy301Uh0gDZcT7MDTNaH7ACz9TY9wIP0S2Ao/Sa4I/0xuMx2b9aLUG2cDX8Vrp0fsw9DVZseZh+Hq2rP+PMvyf5VVetW6SexWyv0X62M8I/2H+XPP9j/OP9o/xP8+Qf7n+TPP9j/FH/+wf6n+Uf7n+HPP9j/LH/+wf7n+PMP9j/Pn3+w/wX+/IP9L/KP9r/En3+w/2X+/IP9r/DnH+w/xp9/sP9V/vyD/a/x5x/sf50//2D/cf78g/1vZPuv4Z/tf5O//x+D/bf/yPbf8Crbvw6E+9e9cP96E+7ftZDtXx3fs/2rpsL9l5n6y/KvwXD/JbPXcf7VM5ftXzUws2j/sbcC6Z74vX861lmZ9I8+np2dHO4rAAAAAAAAAAAAAAAAAAD+kZ+BjGFAn30c4wAAAABJRU5ErkJggg==');
+            background-size: 62%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}

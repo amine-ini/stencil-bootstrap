@@ -5,3 +5,5 @@ Sans ça, le style ne sera pas appliqué.
 Si dans le SCSS un element <Host> est ajouté alors rajouté l'attribut après,
 pour bien cibler le style exemple : ini-button[data-webcomponent] // le style ensuite
 Eviter de juste utiliser ini-button //...
+
+Utiliser les indentations de 4 espaces
