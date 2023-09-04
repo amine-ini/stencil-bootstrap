@@ -10,6 +10,8 @@ export default {
 
 export const Overview = {
     args: {
+        label: 'Select a country to travel',
+        helpText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, blanditiis.',
         placeholder: 'Select an option',
         children: `<option value="fr">🇫🇷 France</option>
 <option value="es">🇪🇸 Espagne</option>

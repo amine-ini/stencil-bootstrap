@@ -64,7 +64,7 @@ export class IniSelect {
 
     componentWillLoad() {
         if (!this.groupId) {
-            this.groupId = "input" + IniSelect.sequence++;
+            this.groupId = "select" + IniSelect.sequence++;
         }
 
         this.parseSelected();

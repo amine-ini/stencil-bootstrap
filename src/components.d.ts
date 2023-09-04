@@ -40,6 +40,7 @@ export namespace Components {
      * The Button component stands as an interactive gateway, inviting users to take action, navigate, or submit.
      * With its versatile design, it can signal importance, set priorities, or provide navigational cues.
      * Whether beckoning a user to 'Learn More', confirming a choice with 'Submit', or pausing a task with 'Cancel', the Button ensures every interaction is clear and intentional.
+     * > When the `create` button is applied, then the `variant` and `outline` props no longer have priority
      */
     interface IniButton {
         /**
@@ -77,6 +78,24 @@ export namespace Components {
           * (Optional) the title of the card in the header
          */
         "headerTitle": string;
+    }
+    interface IniCheckbox {
+        /**
+          * Disable checkbox, user can't have any interaction
+         */
+        "disabled": boolean;
+        /**
+          * The id value for input and label attributes
+         */
+        "groupId": string;
+        /**
+          * The name of the checkbox in the form
+         */
+        "name": string;
+        /**
+          * The default value of checkbox
+         */
+        "value": string;
     }
     /**
      * The Date Picker component simplifies the task of selecting dates by providing a user-friendly interface.
@@ -371,6 +390,7 @@ declare global {
      * The Button component stands as an interactive gateway, inviting users to take action, navigate, or submit.
      * With its versatile design, it can signal importance, set priorities, or provide navigational cues.
      * Whether beckoning a user to 'Learn More', confirming a choice with 'Submit', or pausing a task with 'Cancel', the Button ensures every interaction is clear and intentional.
+     * > When the `create` button is applied, then the `variant` and `outline` props no longer have priority
      */
     interface HTMLIniButtonElement extends Components.IniButton, HTMLStencilElement {
     }
@@ -388,6 +408,12 @@ declare global {
     var HTMLIniCardElement: {
         prototype: HTMLIniCardElement;
         new (): HTMLIniCardElement;
+    };
+    interface HTMLIniCheckboxElement extends Components.IniCheckbox, HTMLStencilElement {
+    }
+    var HTMLIniCheckboxElement: {
+        prototype: HTMLIniCheckboxElement;
+        new (): HTMLIniCheckboxElement;
     };
     /**
      * The Date Picker component simplifies the task of selecting dates by providing a user-friendly interface.
@@ -478,6 +504,7 @@ declare global {
         "ini-badge": HTMLIniBadgeElement;
         "ini-button": HTMLIniButtonElement;
         "ini-card": HTMLIniCardElement;
+        "ini-checkbox": HTMLIniCheckboxElement;
         "ini-date-picker": HTMLIniDatePickerElement;
         "ini-date-range-picker": HTMLIniDateRangePickerElement;
         "ini-dropdown": HTMLIniDropdownElement;
@@ -522,6 +549,7 @@ declare namespace LocalJSX {
      * The Button component stands as an interactive gateway, inviting users to take action, navigate, or submit.
      * With its versatile design, it can signal importance, set priorities, or provide navigational cues.
      * Whether beckoning a user to 'Learn More', confirming a choice with 'Submit', or pausing a task with 'Cancel', the Button ensures every interaction is clear and intentional.
+     * > When the `create` button is applied, then the `variant` and `outline` props no longer have priority
      */
     interface IniButton {
         /**
@@ -563,6 +591,24 @@ declare namespace LocalJSX {
           * (Optional) the title of the card in the header
          */
         "headerTitle"?: string;
+    }
+    interface IniCheckbox {
+        /**
+          * Disable checkbox, user can't have any interaction
+         */
+        "disabled"?: boolean;
+        /**
+          * The id value for input and label attributes
+         */
+        "groupId"?: string;
+        /**
+          * The name of the checkbox in the form
+         */
+        "name"?: string;
+        /**
+          * The default value of checkbox
+         */
+        "value"?: string;
     }
     /**
      * The Date Picker component simplifies the task of selecting dates by providing a user-friendly interface.
@@ -829,6 +875,7 @@ declare namespace LocalJSX {
         "ini-badge": IniBadge;
         "ini-button": IniButton;
         "ini-card": IniCard;
+        "ini-checkbox": IniCheckbox;
         "ini-date-picker": IniDatePicker;
         "ini-date-range-picker": IniDateRangePicker;
         "ini-dropdown": IniDropdown;
@@ -858,6 +905,7 @@ declare module "@stencil/core" {
              * The Button component stands as an interactive gateway, inviting users to take action, navigate, or submit.
              * With its versatile design, it can signal importance, set priorities, or provide navigational cues.
              * Whether beckoning a user to 'Learn More', confirming a choice with 'Submit', or pausing a task with 'Cancel', the Button ensures every interaction is clear and intentional.
+             * > When the `create` button is applied, then the `variant` and `outline` props no longer have priority
              */
             "ini-button": LocalJSX.IniButton & JSXBase.HTMLAttributes<HTMLIniButtonElement>;
             /**
@@ -866,6 +914,7 @@ declare module "@stencil/core" {
              * It effectively organizes and emphasizes content, ensuring that information stands out in an engaging manner.
              */
             "ini-card": LocalJSX.IniCard & JSXBase.HTMLAttributes<HTMLIniCardElement>;
+            "ini-checkbox": LocalJSX.IniCheckbox & JSXBase.HTMLAttributes<HTMLIniCheckboxElement>;
             /**
              * The Date Picker component simplifies the task of selecting dates by providing a user-friendly interface.
              * Whether setting an appointment, scheduling an event, or marking a milestone, it seamlessly integrates into forms and interfaces.

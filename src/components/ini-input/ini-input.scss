@@ -1,6 +1,9 @@
 $input-group-addon-bg: $body-bg;
 
-@import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/forms/labels";
+@import "~bootstrap/scss/forms/form-text";
+@import "~bootstrap/scss/forms/input-group";
+@import "~bootstrap/scss/forms/form-control";
 
 ini-input {
     &.ini-form-control-inline {
