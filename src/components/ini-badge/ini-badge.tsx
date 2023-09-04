@@ -11,12 +11,13 @@ import {Component, Host, h, Prop} from '@stencil/core';
 })
 export class IniBadge {
 
+    /** Variant color of badge */
     @Prop() variant: "primary" | "secondary" | "success" | "danger" | "warning" | "info" = "primary";
 
     render() {
         const classes = {
             'ini-badge': true,
-            [`ini-text-bg-${this.variant}`]: true,
+            [`ini-badge-${this.variant}`]: true,
         };
 
         return (

@@ -1,1 +1,51 @@
 @import "~bootstrap/scss/badge";
+
+$badge-text-primary: $primary-text-emphasis;
+$badge-bg-primary: $primary-bg-subtle;
+
+$badge-text-secondary: $secondary-text-emphasis;
+$badge-bg-secondary: $secondary-bg-subtle;
+
+$badge-text-success: $success-text-emphasis;
+$badge-bg-success: $success-bg-subtle;
+
+$badge-text-danger: $danger-text-emphasis;
+$badge-bg-danger: $danger-bg-subtle;
+
+$badge-text-warning: $warning-text-emphasis;
+$badge-bg-warning: $warning-bg-subtle;
+
+$badge-text-info: $info-text-emphasis;
+$badge-bg-info: $info-bg-subtle;
+
+.ini-badge {
+    &-primary {
+        color: $badge-text-primary;
+        background-color: $badge-bg-primary;
+    }
+
+    &-secondary {
+        color: $badge-text-secondary;
+        background-color: $badge-bg-secondary;
+    }
+
+    &-success {
+        color: $badge-text-success;
+        background-color: $badge-bg-success;
+    }
+
+    &-danger {
+        color: $badge-text-danger;
+        background-color: $badge-bg-danger;
+    }
+
+    &-warning {
+        color: $badge-text-warning;
+        background-color: $badge-bg-warning;
+    }
+
+    &-info {
+        color: $badge-text-info;
+        background-color: $badge-bg-info;
+    }
+}

@@ -31,6 +31,9 @@ export namespace Components {
      * With its minimalist design, it effortlessly integrates into various UI contexts, making it a go-to for concise visual feedback
      */
     interface IniBadge {
+        /**
+          * Variant color of badge
+         */
         "variant": "primary" | "secondary" | "success" | "danger" | "warning" | "info";
     }
     /**
@@ -344,6 +347,9 @@ declare namespace LocalJSX {
      * With its minimalist design, it effortlessly integrates into various UI contexts, making it a go-to for concise visual feedback
      */
     interface IniBadge {
+        /**
+          * Variant color of badge
+         */
         "variant"?: "primary" | "secondary" | "success" | "danger" | "warning" | "info";
     }
     /**
