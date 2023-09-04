@@ -3,7 +3,6 @@ import {getRenderComponent} from "../../utils/utils";
 const tagName = 'ini-alert';
 
 export default {
-    title: 'Core/ini-alert',
     component: tagName,
     ...getRenderComponent(tagName)
 };

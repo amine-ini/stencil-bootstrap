@@ -3,7 +3,6 @@ import {getRenderComponent} from "../../utils/utils";
 const tagName = 'ini-card';
 
 export default {
-    title: 'Core/ini-card',
     component: tagName,
     ...getRenderComponent(tagName)
 };

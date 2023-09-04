@@ -3,7 +3,6 @@ import {getRenderComponent} from "../../utils/utils";
 const tagName = 'ini-dropdown';
 
 export default {
-    title: 'Core/ini-dropdown',
     component: tagName,
     ...getRenderComponent(tagName, 180)
 };

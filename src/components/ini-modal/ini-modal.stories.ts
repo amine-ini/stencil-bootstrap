@@ -3,7 +3,6 @@ import {getRenderComponent} from "../../utils/utils";
 const tagName = 'ini-modal';
 
 export default {
-    title: 'Core/ini-modal',
     component: tagName,
     ...getRenderComponent('ini-modal', 350, 10, '<ini-button onclick="this.nextElementSibling.open=true">Open modal</ini-button>')
 };

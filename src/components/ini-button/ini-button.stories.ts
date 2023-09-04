@@ -1,7 +1,6 @@
 import {getRenderComponent} from "../../utils/utils";
 
 export default {
-    title: 'Core/ini-button',
     component: 'ini-button',
     ...getRenderComponent('ini-button')
 };

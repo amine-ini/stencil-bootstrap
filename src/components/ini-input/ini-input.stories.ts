@@ -3,7 +3,6 @@ import {getRenderComponent} from "../../utils/utils";
 const tagName = 'ini-input';
 
 export default {
-    title: 'Core/ini-input',
     component: tagName,
     ...getRenderComponent(tagName)
 };

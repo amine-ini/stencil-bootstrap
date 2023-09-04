@@ -1,7 +1,6 @@
 import {getRenderComponent} from "../../utils/utils";
 
 export default {
-    title: 'Core/ini-date-picker',
     component: 'ini-date-picker',
     ...getRenderComponent('ini-date-picker', 300)
 };

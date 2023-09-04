@@ -3,7 +3,6 @@ import {getRenderComponent} from "../../utils/utils";
 const tagName = 'ini-select';
 
 export default {
-    title: 'Core/ini-select',
     component: tagName,
     ...getRenderComponent(tagName, 180)
 };
