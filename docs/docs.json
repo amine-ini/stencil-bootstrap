@@ -1,5 +1,5 @@
 {
-  "timestamp": "2023-09-04T18:17:47",
+  "timestamp": "2023-09-04T19:22:07",
   "compiler": {
     "name": "@stencil/core",
     "version": "4.1.0",
@@ -177,7 +177,7 @@
       "filePath": "src/components/ini-button/ini-button.tsx",
       "encapsulation": "none",
       "tag": "ini-button",
-      "docs": "The Button component stands as an interactive gateway, inviting users to take action, navigate, or submit.\nWith its versatile design, it can signal importance, set priorities, or provide navigational cues.\nWhether beckoning a user to 'Learn More', confirming a choice with 'Submit', or pausing a task with 'Cancel', the Button ensures every interaction is clear and intentional.",
+      "docs": "The Button component stands as an interactive gateway, inviting users to take action, navigate, or submit.\nWith its versatile design, it can signal importance, set priorities, or provide navigational cues.\nWhether beckoning a user to 'Learn More', confirming a choice with 'Submit', or pausing a task with 'Cancel', the Button ensures every interaction is clear and intentional.\n\n> When the `create` button is applied, then the `variant` and `outline` props no longer have priority",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -400,6 +400,166 @@
           "reflectToAttr": false,
           "docs": "(Optional) the title of the card in the header",
           "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        }
+      ],
+      "methods": [],
+      "events": [],
+      "listeners": [],
+      "styles": [],
+      "slots": [],
+      "parts": [],
+      "dependents": [],
+      "dependencies": [],
+      "dependencyGraph": {}
+    },
+    {
+      "filePath": "src/components/ini-choice/ini-choice.tsx",
+      "encapsulation": "none",
+      "tag": "ini-choice",
+      "docs": "The Checkbox, Radio and Switch components serves as a versatile tool for capturing user choices. As a Checkbox/Switch it represents binary decisions or enables multi-select options.\nWhen set as a Radio, it facilitates single-choice selections among a group of options. Employed in forms and various UI contexts, their states—whether checked,\nunchecked, or indeterminate—are clearly conveyed. Paired with intuitive labels, this component ensures user selections are both clear and accurate,\nadapting seamlessly based on the specified type.",
+      "docsTags": [],
+      "usage": {},
+      "props": [
+        {
+          "name": "disabled",
+          "type": "boolean",
+          "complexType": {
+            "original": "boolean",
+            "resolved": "boolean",
+            "references": {}
+          },
+          "mutable": false,
+          "attr": "disabled",
+          "reflectToAttr": false,
+          "docs": "Disable component, user can't have any interaction",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "groupId",
+          "type": "string",
+          "complexType": {
+            "original": "string",
+            "resolved": "string",
+            "references": {}
+          },
+          "mutable": true,
+          "attr": "group-id",
+          "reflectToAttr": false,
+          "docs": "The id value for input and label attributes",
+          "docsTags": [],
+          "default": "\"\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "inline",
+          "type": "boolean",
+          "complexType": {
+            "original": "boolean",
+            "resolved": "boolean",
+            "references": {}
+          },
+          "mutable": false,
+          "attr": "inline",
+          "reflectToAttr": false,
+          "docs": "Group checkboxes or radios on the same horizontal row",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "name",
+          "type": "string",
+          "complexType": {
+            "original": "string",
+            "resolved": "string",
+            "references": {}
+          },
+          "mutable": false,
+          "attr": "name",
+          "reflectToAttr": false,
+          "docs": "The name of the checkbox/radio/switch in the form (example: for radios to create group)",
+          "docsTags": [],
+          "default": "\"\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "type",
+          "type": "\"checkbox\" | \"radio\" | \"switch\"",
+          "complexType": {
+            "original": "\"checkbox\" | \"radio\" | \"switch\"",
+            "resolved": "\"checkbox\" | \"radio\" | \"switch\"",
+            "references": {}
+          },
+          "mutable": false,
+          "attr": "type",
+          "reflectToAttr": false,
+          "docs": "The id value for input and label attributes",
+          "docsTags": [],
+          "default": "\"checkbox\"",
+          "values": [
+            {
+              "value": "checkbox",
+              "type": "string"
+            },
+            {
+              "value": "radio",
+              "type": "string"
+            },
+            {
+              "value": "switch",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "value",
+          "type": "string",
+          "complexType": {
+            "original": "string",
+            "resolved": "string",
+            "references": {}
+          },
+          "mutable": false,
+          "attr": "value",
+          "reflectToAttr": false,
+          "docs": "The default value of checkbox/radio/switch",
+          "docsTags": [],
+          "default": "\"\"",
           "values": [
             {
               "type": "string"

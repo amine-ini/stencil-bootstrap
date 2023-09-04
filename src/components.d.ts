@@ -79,9 +79,15 @@ export namespace Components {
          */
         "headerTitle": string;
     }
-    interface IniCheckbox {
+    /**
+     * The Checkbox, Radio and Switch components serves as a versatile tool for capturing user choices. As a Checkbox/Switch it represents binary decisions or enables multi-select options.
+     * When set as a Radio, it facilitates single-choice selections among a group of options. Employed in forms and various UI contexts, their states—whether checked,
+     * unchecked, or indeterminate—are clearly conveyed. Paired with intuitive labels, this component ensures user selections are both clear and accurate,
+     * adapting seamlessly based on the specified type.
+     */
+    interface IniChoice {
         /**
-          * Disable checkbox, user can't have any interaction
+          * Disable component, user can't have any interaction
          */
         "disabled": boolean;
         /**
@@ -89,11 +95,19 @@ export namespace Components {
          */
         "groupId": string;
         /**
-          * The name of the checkbox in the form
+          * Group checkboxes or radios on the same horizontal row
+         */
+        "inline": boolean;
+        /**
+          * The name of the checkbox/radio/switch in the form (example: for radios to create group)
          */
         "name": string;
         /**
-          * The default value of checkbox
+          * The id value for input and label attributes
+         */
+        "type": "checkbox" | "radio" | "switch";
+        /**
+          * The default value of checkbox/radio/switch
          */
         "value": string;
     }
@@ -409,11 +423,17 @@ declare global {
         prototype: HTMLIniCardElement;
         new (): HTMLIniCardElement;
     };
-    interface HTMLIniCheckboxElement extends Components.IniCheckbox, HTMLStencilElement {
+    /**
+     * The Checkbox, Radio and Switch components serves as a versatile tool for capturing user choices. As a Checkbox/Switch it represents binary decisions or enables multi-select options.
+     * When set as a Radio, it facilitates single-choice selections among a group of options. Employed in forms and various UI contexts, their states—whether checked,
+     * unchecked, or indeterminate—are clearly conveyed. Paired with intuitive labels, this component ensures user selections are both clear and accurate,
+     * adapting seamlessly based on the specified type.
+     */
+    interface HTMLIniChoiceElement extends Components.IniChoice, HTMLStencilElement {
     }
-    var HTMLIniCheckboxElement: {
-        prototype: HTMLIniCheckboxElement;
-        new (): HTMLIniCheckboxElement;
+    var HTMLIniChoiceElement: {
+        prototype: HTMLIniChoiceElement;
+        new (): HTMLIniChoiceElement;
     };
     /**
      * The Date Picker component simplifies the task of selecting dates by providing a user-friendly interface.
@@ -504,7 +524,7 @@ declare global {
         "ini-badge": HTMLIniBadgeElement;
         "ini-button": HTMLIniButtonElement;
         "ini-card": HTMLIniCardElement;
-        "ini-checkbox": HTMLIniCheckboxElement;
+        "ini-choice": HTMLIniChoiceElement;
         "ini-date-picker": HTMLIniDatePickerElement;
         "ini-date-range-picker": HTMLIniDateRangePickerElement;
         "ini-dropdown": HTMLIniDropdownElement;
@@ -592,9 +612,15 @@ declare namespace LocalJSX {
          */
         "headerTitle"?: string;
     }
-    interface IniCheckbox {
+    /**
+     * The Checkbox, Radio and Switch components serves as a versatile tool for capturing user choices. As a Checkbox/Switch it represents binary decisions or enables multi-select options.
+     * When set as a Radio, it facilitates single-choice selections among a group of options. Employed in forms and various UI contexts, their states—whether checked,
+     * unchecked, or indeterminate—are clearly conveyed. Paired with intuitive labels, this component ensures user selections are both clear and accurate,
+     * adapting seamlessly based on the specified type.
+     */
+    interface IniChoice {
         /**
-          * Disable checkbox, user can't have any interaction
+          * Disable component, user can't have any interaction
          */
         "disabled"?: boolean;
         /**
@@ -602,11 +628,19 @@ declare namespace LocalJSX {
          */
         "groupId"?: string;
         /**
-          * The name of the checkbox in the form
+          * Group checkboxes or radios on the same horizontal row
+         */
+        "inline"?: boolean;
+        /**
+          * The name of the checkbox/radio/switch in the form (example: for radios to create group)
          */
         "name"?: string;
         /**
-          * The default value of checkbox
+          * The id value for input and label attributes
+         */
+        "type"?: "checkbox" | "radio" | "switch";
+        /**
+          * The default value of checkbox/radio/switch
          */
         "value"?: string;
     }
@@ -875,7 +909,7 @@ declare namespace LocalJSX {
         "ini-badge": IniBadge;
         "ini-button": IniButton;
         "ini-card": IniCard;
-        "ini-checkbox": IniCheckbox;
+        "ini-choice": IniChoice;
         "ini-date-picker": IniDatePicker;
         "ini-date-range-picker": IniDateRangePicker;
         "ini-dropdown": IniDropdown;
@@ -914,7 +948,13 @@ declare module "@stencil/core" {
              * It effectively organizes and emphasizes content, ensuring that information stands out in an engaging manner.
              */
             "ini-card": LocalJSX.IniCard & JSXBase.HTMLAttributes<HTMLIniCardElement>;
-            "ini-checkbox": LocalJSX.IniCheckbox & JSXBase.HTMLAttributes<HTMLIniCheckboxElement>;
+            /**
+             * The Checkbox, Radio and Switch components serves as a versatile tool for capturing user choices. As a Checkbox/Switch it represents binary decisions or enables multi-select options.
+             * When set as a Radio, it facilitates single-choice selections among a group of options. Employed in forms and various UI contexts, their states—whether checked,
+             * unchecked, or indeterminate—are clearly conveyed. Paired with intuitive labels, this component ensures user selections are both clear and accurate,
+             * adapting seamlessly based on the specified type.
+             */
+            "ini-choice": LocalJSX.IniChoice & JSXBase.HTMLAttributes<HTMLIniChoiceElement>;
             /**
              * The Date Picker component simplifies the task of selecting dates by providing a user-friendly interface.
              * Whether setting an appointment, scheduling an event, or marking a milestone, it seamlessly integrates into forms and interfaces.

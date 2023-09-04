@@ -1,11 +1,11 @@
 import {getRenderComponent} from "../../utils/utils";
 
-const tagName = 'ini-checkbox';
+const tagName = 'ini-choice';
 
 export default {
-    title: 'Core/ini-checkbox',
+    title: 'Core/ini-choice',
     component: tagName,
-    ...getRenderComponent(tagName)
+    ...getRenderComponent(tagName),
 };
 
 export const Overview = {
