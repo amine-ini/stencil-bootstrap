@@ -27,6 +27,9 @@ export class IniChoice {
     /** The default value of checkbox/radio/switch */
     @Prop() value: string = "";
 
+    /** Is the component checked */
+    @Prop() checked: boolean = false;
+
     /** Disable component, user can't have any interaction */
     @Prop() disabled: boolean = false;
 
@@ -49,8 +52,11 @@ export class IniChoice {
         return (
             <Host data-webcomponent={true}>
                 <div class={classes}>
-                    <input class="ini-form-check-input" type={this.type === "switch" ? "checkbox" : this.type} value={this.value}
-                           name={this.name} id={this.groupId} disabled={this.disabled} role={this.type === "switch" ? "switch" : null}/>
+                    <input class="ini-form-check-input" value={this.value} checked={this.checked}
+                           name={this.name} id={this.groupId} disabled={this.disabled}
+                           type={this.type === "switch" ? "checkbox" : this.type}
+                           role={this.type === "switch" ? "switch" : null}
+                    />
                     <label class="ini-form-check-label" htmlFor={this.groupId}>
                         <slot/>
                     </label>
