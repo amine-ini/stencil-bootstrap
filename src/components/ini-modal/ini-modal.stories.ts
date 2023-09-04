@@ -11,7 +11,8 @@ export default {
 export const Overview = {
     args: {
         headerTitle: 'Title of beautiful Modal',
-        children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, eveniet.',
-        closeLabel: 'Close'
+        children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, eveniet. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, eveniet.',
+        closeLabel: 'Close',
+        submitLabel: 'Save'
     },
 };

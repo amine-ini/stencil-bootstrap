@@ -1,4 +1,4 @@
-import {Component, Host, h, Prop, Element} from '@stencil/core';
+import {Component, Host, h, Prop, Element, Event, EventEmitter} from '@stencil/core';
 
 /**
  * The Modal component emerges as a focused overlay, capturing users' full attention to deliver essential content or actions.
@@ -21,10 +21,19 @@ export class IniModal {
     @Prop() headerTitle: string;
 
     /** The close button label */
-    @Prop() closeLabel: string;
+    @Prop() closeLabel: string = 'Close';
+
+    /** The submit button label */
+    @Prop() submitLabel: string = 'Ok';
 
     /** Center the modal vertically */
     @Prop() centerY: boolean = true;
+
+    /** When user click on close button */
+    @Event() iniModalClosed: EventEmitter;
+
+    /** When user click on submit button */
+    @Event() iniModalSubmitted: EventEmitter;
 
     dialogElement: HTMLElement
 
@@ -34,8 +43,18 @@ export class IniModal {
         }
     }
 
-    closeModal = _ => {
+    closeModal() {
         this.open = false;
+    }
+
+    onModalClose = e => {
+        this.closeModal();
+        this.iniModalClosed.emit(e);
+    }
+
+    onModalSubmit = e => {
+        this.closeModal();
+        this.iniModalSubmitted.emit(e);
     }
 
     render() {
@@ -56,14 +75,17 @@ export class IniModal {
                         <div class="ini-modal-content">
                             <div class="ini-modal-header">
                                 <h5 class="ini-modal-title">{this.headerTitle}</h5>
-                                <button class="ini-btn-close" onClick={this.closeModal}/>
+                                <button class="ini-btn-close" onClick={this.onModalClose}/>
                             </div>
                             <div class="ini-modal-body">
                                 <slot/>
                             </div>
                             <div class="ini-modal-footer">
-                                <ini-button variant="secondary" onIniClick={this.closeModal}>
+                                <ini-button variant="secondary" onIniClick={this.onModalClose}>
                                     {this.closeLabel}
+                                </ini-button>
+                                <ini-button onIniClick={this.onModalSubmit}>
+                                    {this.submitLabel}
                                 </ini-button>
                             </div>
                         </div>

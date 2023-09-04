@@ -105,9 +105,23 @@
 
 <button>Bouton Natif</button>
 
-<ini-modal header-title="Je suis une modal en Bootstrap & Stencil" close-label="Fermer">
+<ini-modal header-title="Je suis une modal en Bootstrap & Stencil" close-label="Fermer" submit-label="Enregistrer">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias doloremque eligendi explicabo harum, illo maiores
     minus nobis optio repudiandae vitae!
 </ini-modal>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const modal = document.querySelector('ini-modal');
+
+        modal.addEventListener('iniModalClosed', function () {
+            console.log("modal closed");
+        });
+
+        modal.addEventListener('iniModalSubmitted', function () {
+            console.log("modal submitted");
+        });
+    })
+</script>
 </body>
 </html>

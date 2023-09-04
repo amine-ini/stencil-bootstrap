@@ -87,6 +87,10 @@ export namespace Components {
      */
     interface IniChoice {
         /**
+          * Is the component checked
+         */
+        "checked": boolean;
+        /**
           * Disable component, user can't have any interaction
          */
         "disabled": boolean;
@@ -309,6 +313,10 @@ export namespace Components {
           * Open or close the modal
          */
         "open": boolean;
+        /**
+          * The submit button label
+         */
+        "submitLabel": string;
     }
     /**
      * The Select control offers an intuitive way to present a list of options to users. It allows for easy single or multiple selections from a dropdown menu.
@@ -376,6 +384,10 @@ export namespace Components {
 export interface IniButtonCustomEvent<T> extends CustomEvent<T> {
     detail: T;
     target: HTMLIniButtonElement;
+}
+export interface IniModalCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLIniModalElement;
 }
 declare global {
     /**
@@ -620,6 +632,10 @@ declare namespace LocalJSX {
      */
     interface IniChoice {
         /**
+          * Is the component checked
+         */
+        "checked"?: boolean;
+        /**
           * Disable component, user can't have any interaction
          */
         "disabled"?: boolean;
@@ -838,9 +854,21 @@ declare namespace LocalJSX {
          */
         "headerTitle"?: string;
         /**
+          * When user click on close button
+         */
+        "onIniModalClosed"?: (event: IniModalCustomEvent<any>) => void;
+        /**
+          * When user click on submit button
+         */
+        "onIniModalSubmitted"?: (event: IniModalCustomEvent<any>) => void;
+        /**
           * Open or close the modal
          */
         "open"?: boolean;
+        /**
+          * The submit button label
+         */
+        "submitLabel"?: string;
     }
     /**
      * The Select control offers an intuitive way to present a list of options to users. It allows for easy single or multiple selections from a dropdown menu.

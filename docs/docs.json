@@ -1,5 +1,5 @@
 {
-  "timestamp": "2023-09-04T19:22:07",
+  "timestamp": "2023-09-04T19:47:38",
   "compiler": {
     "name": "@stencil/core",
     "version": "4.1.0",
@@ -427,6 +427,28 @@
       "docsTags": [],
       "usage": {},
       "props": [
+        {
+          "name": "checked",
+          "type": "boolean",
+          "complexType": {
+            "original": "boolean",
+            "resolved": "boolean",
+            "references": {}
+          },
+          "mutable": false,
+          "attr": "checked",
+          "reflectToAttr": false,
+          "docs": "Is the component checked",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
         {
           "name": "disabled",
           "type": "boolean",
@@ -1670,10 +1692,60 @@
           ],
           "optional": false,
           "required": false
+        },
+        {
+          "name": "submitLabel",
+          "type": "string",
+          "complexType": {
+            "original": "string",
+            "resolved": "string",
+            "references": {}
+          },
+          "mutable": false,
+          "attr": "submit-label",
+          "reflectToAttr": false,
+          "docs": "The submit button label",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
         }
       ],
       "methods": [],
-      "events": [],
+      "events": [
+        {
+          "event": "iniModalClosed",
+          "detail": "any",
+          "bubbles": true,
+          "complexType": {
+            "original": "any",
+            "resolved": "any",
+            "references": {}
+          },
+          "cancelable": true,
+          "composed": true,
+          "docs": "When user click on close button",
+          "docsTags": []
+        },
+        {
+          "event": "iniModalSubmitted",
+          "detail": "any",
+          "bubbles": true,
+          "complexType": {
+            "original": "any",
+            "resolved": "any",
+            "references": {}
+          },
+          "cancelable": true,
+          "composed": true,
+          "docs": "When user click on submit button",
+          "docsTags": []
+        }
+      ],
       "listeners": [],
       "styles": [],
       "slots": [],
