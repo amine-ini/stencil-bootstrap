@@ -2,4 +2,22 @@
 
 ini-button[data-webcomponent] {
     display: inline-block;
+
+    .ini-btn {
+        &-create {
+            border: dashed $btn-border-width $create-color-300;
+            color: $create-color-500;
+
+            &:hover,
+            &:active,
+            &:focus {
+                border-color: $create-color-500 !important;
+                color: $create-color-500 !important;
+            }
+
+            &:active {
+                background-color: $create-color-50 !important;
+            }
+        }
+    }
 }

@@ -43,6 +43,10 @@ export namespace Components {
      */
     interface IniButton {
         /**
+          * Apply the style of a create button
+         */
+        "create": boolean;
+        /**
           * Disable button, user can't have any interaction
          */
         "disabled": boolean;
@@ -520,6 +524,10 @@ declare namespace LocalJSX {
      * Whether beckoning a user to 'Learn More', confirming a choice with 'Submit', or pausing a task with 'Cancel', the Button ensures every interaction is clear and intentional.
      */
     interface IniButton {
+        /**
+          * Apply the style of a create button
+         */
+        "create"?: boolean;
         /**
           * Disable button, user can't have any interaction
          */

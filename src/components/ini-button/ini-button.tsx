@@ -21,6 +21,9 @@ export class IniButton {
     /** Remove the background and highlight the borders */
     @Prop() outline: boolean = false;
 
+    /** Apply the style of a create button */
+    @Prop() create: boolean = false;
+
     /** Disable button, user can't have any interaction */
     @Prop() disabled: boolean = false;
 
@@ -33,8 +36,9 @@ export class IniButton {
     render() {
         const classes = {
             'ini-btn': true,
-            [`ini-btn-${this.variant}`]: !this.outline,
-            [`ini-btn-outline-${this.variant}`]: this.outline,
+            'ini-btn-create': this.create,
+            [`ini-btn-${this.variant}`]: !this.outline && !this.create,
+            [`ini-btn-outline-${this.variant}`]: this.outline && !this.create,
             'ini-btn-sm': this.size === "small",
             'ini-btn-lg': this.size === "large",
             [this.extraClass]: this.extraClass.length > 0

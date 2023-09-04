@@ -1,5 +1,5 @@
 {
-  "timestamp": "2023-09-04T17:46:13",
+  "timestamp": "2023-09-04T18:17:47",
   "compiler": {
     "name": "@stencil/core",
     "version": "4.1.0",
@@ -181,6 +181,28 @@
       "docsTags": [],
       "usage": {},
       "props": [
+        {
+          "name": "create",
+          "type": "boolean",
+          "complexType": {
+            "original": "boolean",
+            "resolved": "boolean",
+            "references": {}
+          },
+          "mutable": false,
+          "attr": "create",
+          "reflectToAttr": false,
+          "docs": "Apply the style of a create button",
+          "docsTags": [],
+          "default": "false",
+          "values": [
+            {
+              "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
         {
           "name": "disabled",
           "type": "boolean",

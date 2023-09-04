@@ -1,9 +1,14 @@
 Il faut englober chaque composant avec <Host data-webcomponent={true}>
 C'est ce qui va permettre que le style Bootstrap fonctionne sur les web components,
-Sans ça, le style ne sera pas appliqué.
+Sans ça, le style ne sera pas appliqué => car toutes les classes générées
+sont préfixés par le sélecteur [data-webcomponent]
 
 Si dans le SCSS un element <Host> est ajouté alors rajouté l'attribut après,
 pour bien cibler le style exemple : ini-button[data-webcomponent] // le style ensuite
-Eviter de juste utiliser ini-button //...
+Éviter de juste utiliser ini-button
 
 Utiliser les indentations de 4 espaces
+
+Le Design System n'a pas à gérer de composant ini-icon, c'est dans l'application qu'on
+importe les librairies icons et qu'on fait passer les classes dans les props des composants
+exemple ini-input
