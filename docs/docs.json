@@ -1,5 +1,5 @@
 {
-  "timestamp": "2023-09-03T22:45:30",
+  "timestamp": "2023-09-04T09:54:12",
   "compiler": {
     "name": "@stencil/core",
     "version": "4.1.0",
@@ -10,8 +10,7 @@
       "filePath": "src/components/ini-alert/ini-alert.tsx",
       "encapsulation": "none",
       "tag": "ini-alert",
-      "readme": "# ini-alert\n\n\n",
-      "docs": "",
+      "docs": "The Alert component serves as a dynamic container for conveying vital notifications and messages.\nDepending on the context, alerts can adopt various types such as Primary, Danger, Success, Warning, and other relevant variants. Each type visually signifies its importance and relevance.\nAdditionally, to enhance clarity and emphasis, alerts can be complemented with a title. For users desiring an uncluttered interface,\nthe alerts also offer a dismissible feature, enabling them to close the message after acknowledgment. Through all its configurations, the Alert component ensures that key communications remain prominent and clear.",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -26,7 +25,7 @@
           "mutable": false,
           "attr": "dismissible",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Allows you to hide the alert if the close button is clicked",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -48,7 +47,7 @@
           "mutable": false,
           "attr": "header-title",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "(optional) The title of the alert that accompanies the content",
           "docsTags": [],
           "values": [
             {
@@ -69,7 +68,7 @@
           "mutable": false,
           "attr": "variant",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Context of the alert, if it is an error message: `danger`, an action which is successful: `success` ...",
           "docsTags": [],
           "default": "\"primary\"",
           "values": [
@@ -116,8 +115,7 @@
       "filePath": "src/components/ini-badge/ini-badge.tsx",
       "encapsulation": "none",
       "tag": "ini-badge",
-      "readme": "# ini-badge\n",
-      "docs": "",
+      "docs": "The Badge component is a compact yet powerful means of showcasing status, highlighting states, or drawing attention to specific data points.\nWith its minimalist design, it effortlessly integrates into various UI contexts, making it a go-to for concise visual feedback",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -179,8 +177,7 @@
       "filePath": "src/components/ini-button/ini-button.tsx",
       "encapsulation": "none",
       "tag": "ini-button",
-      "readme": "# ini-button\n",
-      "docs": "",
+      "docs": "The Button component stands as an interactive gateway, inviting users to take action, navigate, or submit.\nWith its versatile design, it can signal importance, set priorities, or provide navigational cues.\nWhether beckoning a user to 'Learn More', confirming a choice with 'Submit', or pausing a task with 'Cancel', the Button ensures every interaction is clear and intentional.",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -364,8 +361,7 @@
       "filePath": "src/components/ini-card/ini-card.tsx",
       "encapsulation": "none",
       "tag": "ini-card",
-      "readme": "# ini-card\n",
-      "docs": "",
+      "docs": "The Card component acts as a versatile container, framing content with a clear visual boundary. Whether showcasing snippets of text,\nhosting other UI components, or spotlighting information with an optional title, the Card offers a neat and structured presentation.\nIt effectively organizes and emphasizes content, ensuring that information stands out in an engaging manner.",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -405,8 +401,7 @@
       "filePath": "src/components/ini-date-picker/ini-date-picker.tsx",
       "encapsulation": "none",
       "tag": "ini-date-picker",
-      "readme": "# ini-date-picker\n\n\n",
-      "docs": "Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker",
+      "docs": "The Date Picker component simplifies the task of selecting dates by providing a user-friendly interface.\nWhether setting an appointment, scheduling an event, or marking a milestone, it seamlessly integrates into forms and interfaces.\nWith intuitive navigation through days, months, and years, the Date Picker ensures that capturing a specific date or date range is both precise and effortless.\n\nDocumentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -585,8 +580,7 @@
       "filePath": "src/components/ini-date-range-picker/ini-date-range-picker.tsx",
       "encapsulation": "none",
       "tag": "ini-date-range-picker",
-      "readme": "# ini-date-range-picker\n\n\n",
-      "docs": "Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker",
+      "docs": "The Date Range Picker component streamlines the process of selecting a span of dates. Ideal for defining periods such as booking intervals,\nfinancial quarters, or event durations, it offers an intuitive interface to capture both start and end dates. Its user-centric design ensures\nthat selecting consecutive days or disparate intervals is straightforward, providing clarity and precision in every date range selection.\n\nDocumentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -831,8 +825,7 @@
       "filePath": "src/components/ini-dropdown/ini-dropdown.tsx",
       "encapsulation": "none",
       "tag": "ini-dropdown",
-      "readme": "# ini-dropdown\n",
-      "docs": "",
+      "docs": "The Dropdown component offers a compact way to present multiple options without overwhelming the interface.\nBy clicking or hovering, users can unveil a list of choices, making selections both space-efficient and user-friendly.\nWhether used for navigation, action lists, or form inputs, the Dropdown ensures a smooth experience, guiding users through their options with elegance and simplicity.\n\nThis component use the Popper library : https://popper.js.org/docs/v2/",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -996,8 +989,7 @@
       "filePath": "src/components/ini-input/ini-input.tsx",
       "encapsulation": "none",
       "tag": "ini-input",
-      "readme": "# ini-input\n\n\n",
-      "docs": "",
+      "docs": "Form Input components are the essential touchpoints of user data entry. From simple text fields capturing names to specialized inputs like emails or color pickers,\nthey transform user interactions into actionable data. Designed for clarity and ease of use, these components ensure that users effortlessly provide information,\nwhether its personal details, preferences, or any specific input. Every interaction is optimized for accuracy, ensuring data integrity across varied input types.",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -1407,8 +1399,7 @@
       "filePath": "src/components/ini-modal/ini-modal.tsx",
       "encapsulation": "none",
       "tag": "ini-modal",
-      "readme": "# ini-modal\n",
-      "docs": "",
+      "docs": "The Modal component emerges as a focused overlay, capturing users' full attention to deliver essential content or actions.\nWhether presenting vital information, confirming user decisions, or offering supplemental details, the Modal provides an immersive environment, momentarily separating users from the main interface.\nIts distinct presence ensures that the information or actions within are both central and prioritized, facilitating focused interactions.",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -1519,8 +1510,7 @@
       "filePath": "src/components/ini-select/ini-select.tsx",
       "encapsulation": "none",
       "tag": "ini-select",
-      "readme": "# ini-select\n\n\n",
-      "docs": "Select control",
+      "docs": "The Select control offers an intuitive way to present a list of options to users. It allows for easy single or multiple selections from a dropdown menu.\nAdditionally, some select controls provide the ability to search or type in text, offering users an even more streamlined experience.\nWhether you're choosing from a predefined list or inputting new information, the Select control is designed to handle both with efficiency.\nPlus, with built-in functions for adding or removing options, it ensures a dynamic user interaction that adapts to various needs.\n\nThis component use TomSelect library : https://tom-select.js.org/docs/",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -1633,6 +1623,28 @@
           ],
           "optional": false,
           "required": false
+        },
+        {
+          "name": "selected",
+          "type": "string",
+          "complexType": {
+            "original": "string",
+            "resolved": "string",
+            "references": {}
+          },
+          "mutable": false,
+          "attr": "selected",
+          "reflectToAttr": false,
+          "docs": "Pass the values selected by default (for multiple values must be used a delimiter between the values example: `apple,grape,orange`)",
+          "docsTags": [],
+          "default": "\"\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
         }
       ],
       "methods": [],
@@ -1649,8 +1661,7 @@
       "filePath": "src/components/ini-tooltip/ini-tooltip.tsx",
       "encapsulation": "none",
       "tag": "ini-tooltip",
-      "readme": "# ini-tooltip\n\n\n",
-      "docs": "",
+      "docs": "The Tooltip component acts as a brief informational aide, offering users additional context or guidance when they hover or focus on an element.\nSubtle yet informative, it unveils insights without disrupting the user flow. Whether elucidating an icon's function,\nproviding supplementary data, or explaining a term, the Tooltip ensures clarity is just a hover away.\n\n> The content which must display the tooltip when hovering must be wrapped by `<ini-tooltip>`, can be text, button, any other elements\n\nThis component use the Popper library : https://popper.js.org/docs/v2/",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -1665,7 +1676,7 @@
           "mutable": false,
           "attr": "placement",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Where should the tooltip be displayed by bringing the element, if the tooltip leaves the parent container, then it will be replaced automatically",
           "docsTags": [],
           "default": "\"top\"",
           "values": [
@@ -1700,7 +1711,7 @@
           "mutable": false,
           "attr": "title-content",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The content to display in the tooltip when hovering",
           "docsTags": [],
           "default": "\"\"",
           "values": [

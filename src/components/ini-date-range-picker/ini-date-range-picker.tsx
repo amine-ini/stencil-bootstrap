@@ -2,6 +2,10 @@ import {Component, Host, h, Prop, Element} from '@stencil/core';
 import DateRangePicker from 'vanillajs-datepicker/js/DateRangePicker.js';
 
 /**
+ * The Date Range Picker component streamlines the process of selecting a span of dates. Ideal for defining periods such as booking intervals,
+ * financial quarters, or event durations, it offers an intuitive interface to capture both start and end dates. Its user-centric design ensures
+ * that selecting consecutive days or disparate intervals is straightforward, providing clarity and precision in every date range selection.
+ *
  * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
  */
 @Component({

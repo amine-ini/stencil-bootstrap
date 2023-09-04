@@ -1,16 +1,14 @@
-import {parseArgs} from "../../utils/utils";
+import {getRenderComponent} from "../../utils/utils";
 
 const tagName = 'ini-modal';
 
 export default {
     title: 'Core/ini-modal',
     component: tagName,
-    render: ({children, ...args}) => `
-    <ini-button onclick="this.nextElementSibling.open=true">Open modal</ini-button>
-    <ini-modal ${parseArgs(args)}>${children}</ini-modal>`
+    ...getRenderComponent('ini-modal', 350, 10, '<ini-button onclick="this.nextElementSibling.open=true">Open modal</ini-button>')
 };
 
-export const Primary = {
+export const Overview = {
     args: {
         headerTitle: 'Title of beautiful Modal',
         children: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, eveniet.',

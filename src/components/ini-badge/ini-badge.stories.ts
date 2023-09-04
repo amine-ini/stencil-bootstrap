@@ -8,7 +8,7 @@ export default {
     ...getRenderComponent(tagName)
 };
 
-export const Primary = {
+export const Overview = {
     args: {
         children: 'Storybook',
         variant: 'primary'

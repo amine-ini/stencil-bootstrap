@@ -5,15 +5,15 @@ const tagName = 'ini-select';
 export default {
     title: 'Core/ini-select',
     component: tagName,
-    ...getRenderComponent(tagName)
+    ...getRenderComponent(tagName, 180)
 };
 
-export const Primary = {
+export const Overview = {
     args: {
         placeholder: 'Select an option',
-        children: `<option>🇫🇷 France</option>
-<option>🇪🇸 Espagne</option>
-<option>🇫🇮 Finlande</option>
-<option>🇮🇹 Italie</option>`
+        children: `<option value="fr">🇫🇷 France</option>
+<option value="es">🇪🇸 Espagne</option>
+<option value="fl">🇫🇮 Finlande</option>
+<option value="it">🇮🇹 Italie</option>`
     },
 };

@@ -1,5 +1,10 @@
 import {Component, Host, h, Prop, Method} from '@stencil/core';
 
+/**
+ * Form Input components are the essential touchpoints of user data entry. From simple text fields capturing names to specialized inputs like emails or color pickers,
+ * they transform user interactions into actionable data. Designed for clarity and ease of use, these components ensure that users effortlessly provide information,
+ * whether its personal details, preferences, or any specific input. Every interaction is optimized for accuracy, ensuring data integrity across varied input types.
+ */
 @Component({
     tag: 'ini-input',
     styleUrl: 'ini-input.scss',

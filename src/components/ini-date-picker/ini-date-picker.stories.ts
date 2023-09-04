@@ -3,10 +3,10 @@ import {getRenderComponent} from "../../utils/utils";
 export default {
     title: 'Core/ini-date-picker',
     component: 'ini-date-picker',
-    ...getRenderComponent('ini-date-picker')
+    ...getRenderComponent('ini-date-picker', 300)
 };
 
-export const Primary = {
+export const Overview = {
     args: {
         dateFormat: 'dd/mm/yyyy',
         label: 'Your birthday',

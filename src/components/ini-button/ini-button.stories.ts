@@ -6,7 +6,7 @@ export default {
     ...getRenderComponent('ini-button')
 };
 
-export const Primary = {
+export const Overview = {
     args: {
         variant: "primary",
         size: "medium",

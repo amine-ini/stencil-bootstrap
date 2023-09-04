@@ -8,10 +8,10 @@ export default {
     ...getRenderComponent(tagName)
 };
 
-export const Primary = {
+export const Overview = {
     args: {
         headerTitle: 'Hello team 🤓',
-        children: 'Bienvenue, sur le Storybook des composants StencilJS en Bootstrap.',
+        children: 'Welcome to the Storybook of StencilJS components in Bootstrap. You can explore each component and play with it 🕹.',
         dismissible: true
     },
 };

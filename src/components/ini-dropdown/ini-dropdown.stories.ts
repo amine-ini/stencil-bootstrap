@@ -5,10 +5,10 @@ const tagName = 'ini-dropdown';
 export default {
     title: 'Core/ini-dropdown',
     component: tagName,
-    ...getRenderComponent(tagName)
+    ...getRenderComponent(tagName, 180)
 };
 
-export const Primary = {
+export const Overview = {
     args: {
         label: 'Select country',
         outline: true,

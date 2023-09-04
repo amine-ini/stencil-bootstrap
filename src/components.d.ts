@@ -6,14 +6,38 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    /**
+     * The Alert component serves as a dynamic container for conveying vital notifications and messages.
+     * Depending on the context, alerts can adopt various types such as Primary, Danger, Success, Warning, and other relevant variants. Each type visually signifies its importance and relevance.
+     * Additionally, to enhance clarity and emphasis, alerts can be complemented with a title. For users desiring an uncluttered interface,
+     * the alerts also offer a dismissible feature, enabling them to close the message after acknowledgment. Through all its configurations, the Alert component ensures that key communications remain prominent and clear.
+     */
     interface IniAlert {
+        /**
+          * Allows you to hide the alert if the close button is clicked
+         */
         "dismissible": boolean;
+        /**
+          * (optional) The title of the alert that accompanies the content
+         */
         "headerTitle": string;
+        /**
+          * Context of the alert, if it is an error message: `danger`, an action which is successful: `success` ...
+         */
         "variant": "primary" | "secondary" | "success" | "danger" | "warning" | "info";
     }
+    /**
+     * The Badge component is a compact yet powerful means of showcasing status, highlighting states, or drawing attention to specific data points.
+     * With its minimalist design, it effortlessly integrates into various UI contexts, making it a go-to for concise visual feedback
+     */
     interface IniBadge {
         "variant": "primary" | "secondary" | "success" | "danger" | "warning" | "info";
     }
+    /**
+     * The Button component stands as an interactive gateway, inviting users to take action, navigate, or submit.
+     * With its versatile design, it can signal importance, set priorities, or provide navigational cues.
+     * Whether beckoning a user to 'Learn More', confirming a choice with 'Submit', or pausing a task with 'Cancel', the Button ensures every interaction is clear and intentional.
+     */
     interface IniButton {
         "disabled": boolean;
         "extraClass": string;
@@ -21,10 +45,18 @@ export namespace Components {
         "size": "small" | "medium" | "large";
         "variant": "primary" | "secondary" | "success" | "danger" | "warning" | "info";
     }
+    /**
+     * The Card component acts as a versatile container, framing content with a clear visual boundary. Whether showcasing snippets of text,
+     * hosting other UI components, or spotlighting information with an optional title, the Card offers a neat and structured presentation.
+     * It effectively organizes and emphasizes content, ensuring that information stands out in an engaging manner.
+     */
     interface IniCard {
         "headerTitle": string;
     }
     /**
+     * The Date Picker component simplifies the task of selecting dates by providing a user-friendly interface.
+     * Whether setting an appointment, scheduling an event, or marking a milestone, it seamlessly integrates into forms and interfaces.
+     * With intuitive navigation through days, months, and years, the Date Picker ensures that capturing a specific date or date range is both precise and effortless.
      * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
      */
     interface IniDatePicker {
@@ -37,6 +69,9 @@ export namespace Components {
         "value": string;
     }
     /**
+     * The Date Range Picker component streamlines the process of selecting a span of dates. Ideal for defining periods such as booking intervals,
+     * financial quarters, or event durations, it offers an intuitive interface to capture both start and end dates. Its user-centric design ensures
+     * that selecting consecutive days or disparate intervals is straightforward, providing clarity and precision in every date range selection.
      * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
      */
     interface IniDateRangePicker {
@@ -51,6 +86,12 @@ export namespace Components {
         "startPlaceholder": string;
         "startValue": string;
     }
+    /**
+     * The Dropdown component offers a compact way to present multiple options without overwhelming the interface.
+     * By clicking or hovering, users can unveil a list of choices, making selections both space-efficient and user-friendly.
+     * Whether used for navigation, action lists, or form inputs, the Dropdown ensures a smooth experience, guiding users through their options with elegance and simplicity.
+     * This component use the Popper library : https://popper.js.org/docs/v2/
+     */
     interface IniDropdown {
         "disabled": boolean;
         "label": string;
@@ -58,6 +99,11 @@ export namespace Components {
         "placement": "top" | "bottom" | "right" | "left";
         "size": "small" | "medium" | "large";
     }
+    /**
+     * Form Input components are the essential touchpoints of user data entry. From simple text fields capturing names to specialized inputs like emails or color pickers,
+     * they transform user interactions into actionable data. Designed for clarity and ease of use, these components ensure that users effortlessly provide information,
+     * whether its personal details, preferences, or any specific input. Every interaction is optimized for accuracy, ensuring data integrity across varied input types.
+     */
     interface IniInput {
         "disabled": boolean;
         "getInputRef": () => Promise<HTMLElement>;
@@ -78,6 +124,11 @@ export namespace Components {
         "type": "text" | "password" | "email" | "number" | "search" | "tel" | "url" | "color" | "file" | "textarea";
         "value": string;
     }
+    /**
+     * The Modal component emerges as a focused overlay, capturing users' full attention to deliver essential content or actions.
+     * Whether presenting vital information, confirming user decisions, or offering supplemental details, the Modal provides an immersive environment, momentarily separating users from the main interface.
+     * Its distinct presence ensures that the information or actions within are both central and prioritized, facilitating focused interactions.
+     */
     interface IniModal {
         "centerY": boolean;
         "closeLabel": string;
@@ -85,7 +136,11 @@ export namespace Components {
         "open": boolean;
     }
     /**
-     * Select control
+     * The Select control offers an intuitive way to present a list of options to users. It allows for easy single or multiple selections from a dropdown menu.
+     * Additionally, some select controls provide the ability to search or type in text, offering users an even more streamlined experience.
+     * Whether you're choosing from a predefined list or inputting new information, the Select control is designed to handle both with efficiency.
+     * Plus, with built-in functions for adding or removing options, it ensures a dynamic user interaction that adapts to various needs.
+     * This component use TomSelect library : https://tom-select.js.org/docs/
      */
     interface IniSelect {
         "allowEmpty": boolean;
@@ -93,9 +148,26 @@ export namespace Components {
         "multiple": boolean;
         "name": string;
         "placeholder": string;
+        /**
+          * Pass the values selected by default (for multiple values must be used a delimiter between the values example: `apple,grape,orange`)
+         */
+        "selected": string;
     }
+    /**
+     * The Tooltip component acts as a brief informational aide, offering users additional context or guidance when they hover or focus on an element.
+     * Subtle yet informative, it unveils insights without disrupting the user flow. Whether elucidating an icon's function,
+     * providing supplementary data, or explaining a term, the Tooltip ensures clarity is just a hover away.
+     * > The content which must display the tooltip when hovering must be wrapped by `<ini-tooltip>`, can be text, button, any other elements
+     * This component use the Popper library : https://popper.js.org/docs/v2/
+     */
     interface IniTooltip {
+        /**
+          * Where should the tooltip be displayed by bringing the element, if the tooltip leaves the parent container, then it will be replaced automatically
+         */
         "placement": "top" | "bottom" | "right" | "left";
+        /**
+          * The content to display in the tooltip when hovering
+         */
         "titleContent": string;
     }
 }
@@ -104,24 +176,44 @@ export interface IniButtonCustomEvent<T> extends CustomEvent<T> {
     target: HTMLIniButtonElement;
 }
 declare global {
+    /**
+     * The Alert component serves as a dynamic container for conveying vital notifications and messages.
+     * Depending on the context, alerts can adopt various types such as Primary, Danger, Success, Warning, and other relevant variants. Each type visually signifies its importance and relevance.
+     * Additionally, to enhance clarity and emphasis, alerts can be complemented with a title. For users desiring an uncluttered interface,
+     * the alerts also offer a dismissible feature, enabling them to close the message after acknowledgment. Through all its configurations, the Alert component ensures that key communications remain prominent and clear.
+     */
     interface HTMLIniAlertElement extends Components.IniAlert, HTMLStencilElement {
     }
     var HTMLIniAlertElement: {
         prototype: HTMLIniAlertElement;
         new (): HTMLIniAlertElement;
     };
+    /**
+     * The Badge component is a compact yet powerful means of showcasing status, highlighting states, or drawing attention to specific data points.
+     * With its minimalist design, it effortlessly integrates into various UI contexts, making it a go-to for concise visual feedback
+     */
     interface HTMLIniBadgeElement extends Components.IniBadge, HTMLStencilElement {
     }
     var HTMLIniBadgeElement: {
         prototype: HTMLIniBadgeElement;
         new (): HTMLIniBadgeElement;
     };
+    /**
+     * The Button component stands as an interactive gateway, inviting users to take action, navigate, or submit.
+     * With its versatile design, it can signal importance, set priorities, or provide navigational cues.
+     * Whether beckoning a user to 'Learn More', confirming a choice with 'Submit', or pausing a task with 'Cancel', the Button ensures every interaction is clear and intentional.
+     */
     interface HTMLIniButtonElement extends Components.IniButton, HTMLStencilElement {
     }
     var HTMLIniButtonElement: {
         prototype: HTMLIniButtonElement;
         new (): HTMLIniButtonElement;
     };
+    /**
+     * The Card component acts as a versatile container, framing content with a clear visual boundary. Whether showcasing snippets of text,
+     * hosting other UI components, or spotlighting information with an optional title, the Card offers a neat and structured presentation.
+     * It effectively organizes and emphasizes content, ensuring that information stands out in an engaging manner.
+     */
     interface HTMLIniCardElement extends Components.IniCard, HTMLStencilElement {
     }
     var HTMLIniCardElement: {
@@ -129,6 +221,9 @@ declare global {
         new (): HTMLIniCardElement;
     };
     /**
+     * The Date Picker component simplifies the task of selecting dates by providing a user-friendly interface.
+     * Whether setting an appointment, scheduling an event, or marking a milestone, it seamlessly integrates into forms and interfaces.
+     * With intuitive navigation through days, months, and years, the Date Picker ensures that capturing a specific date or date range is both precise and effortless.
      * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
      */
     interface HTMLIniDatePickerElement extends Components.IniDatePicker, HTMLStencilElement {
@@ -138,6 +233,9 @@ declare global {
         new (): HTMLIniDatePickerElement;
     };
     /**
+     * The Date Range Picker component streamlines the process of selecting a span of dates. Ideal for defining periods such as booking intervals,
+     * financial quarters, or event durations, it offers an intuitive interface to capture both start and end dates. Its user-centric design ensures
+     * that selecting consecutive days or disparate intervals is straightforward, providing clarity and precision in every date range selection.
      * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
      */
     interface HTMLIniDateRangePickerElement extends Components.IniDateRangePicker, HTMLStencilElement {
@@ -146,18 +244,34 @@ declare global {
         prototype: HTMLIniDateRangePickerElement;
         new (): HTMLIniDateRangePickerElement;
     };
+    /**
+     * The Dropdown component offers a compact way to present multiple options without overwhelming the interface.
+     * By clicking or hovering, users can unveil a list of choices, making selections both space-efficient and user-friendly.
+     * Whether used for navigation, action lists, or form inputs, the Dropdown ensures a smooth experience, guiding users through their options with elegance and simplicity.
+     * This component use the Popper library : https://popper.js.org/docs/v2/
+     */
     interface HTMLIniDropdownElement extends Components.IniDropdown, HTMLStencilElement {
     }
     var HTMLIniDropdownElement: {
         prototype: HTMLIniDropdownElement;
         new (): HTMLIniDropdownElement;
     };
+    /**
+     * Form Input components are the essential touchpoints of user data entry. From simple text fields capturing names to specialized inputs like emails or color pickers,
+     * they transform user interactions into actionable data. Designed for clarity and ease of use, these components ensure that users effortlessly provide information,
+     * whether its personal details, preferences, or any specific input. Every interaction is optimized for accuracy, ensuring data integrity across varied input types.
+     */
     interface HTMLIniInputElement extends Components.IniInput, HTMLStencilElement {
     }
     var HTMLIniInputElement: {
         prototype: HTMLIniInputElement;
         new (): HTMLIniInputElement;
     };
+    /**
+     * The Modal component emerges as a focused overlay, capturing users' full attention to deliver essential content or actions.
+     * Whether presenting vital information, confirming user decisions, or offering supplemental details, the Modal provides an immersive environment, momentarily separating users from the main interface.
+     * Its distinct presence ensures that the information or actions within are both central and prioritized, facilitating focused interactions.
+     */
     interface HTMLIniModalElement extends Components.IniModal, HTMLStencilElement {
     }
     var HTMLIniModalElement: {
@@ -165,7 +279,11 @@ declare global {
         new (): HTMLIniModalElement;
     };
     /**
-     * Select control
+     * The Select control offers an intuitive way to present a list of options to users. It allows for easy single or multiple selections from a dropdown menu.
+     * Additionally, some select controls provide the ability to search or type in text, offering users an even more streamlined experience.
+     * Whether you're choosing from a predefined list or inputting new information, the Select control is designed to handle both with efficiency.
+     * Plus, with built-in functions for adding or removing options, it ensures a dynamic user interaction that adapts to various needs.
+     * This component use TomSelect library : https://tom-select.js.org/docs/
      */
     interface HTMLIniSelectElement extends Components.IniSelect, HTMLStencilElement {
     }
@@ -173,6 +291,13 @@ declare global {
         prototype: HTMLIniSelectElement;
         new (): HTMLIniSelectElement;
     };
+    /**
+     * The Tooltip component acts as a brief informational aide, offering users additional context or guidance when they hover or focus on an element.
+     * Subtle yet informative, it unveils insights without disrupting the user flow. Whether elucidating an icon's function,
+     * providing supplementary data, or explaining a term, the Tooltip ensures clarity is just a hover away.
+     * > The content which must display the tooltip when hovering must be wrapped by `<ini-tooltip>`, can be text, button, any other elements
+     * This component use the Popper library : https://popper.js.org/docs/v2/
+     */
     interface HTMLIniTooltipElement extends Components.IniTooltip, HTMLStencilElement {
     }
     var HTMLIniTooltipElement: {
@@ -194,14 +319,38 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    /**
+     * The Alert component serves as a dynamic container for conveying vital notifications and messages.
+     * Depending on the context, alerts can adopt various types such as Primary, Danger, Success, Warning, and other relevant variants. Each type visually signifies its importance and relevance.
+     * Additionally, to enhance clarity and emphasis, alerts can be complemented with a title. For users desiring an uncluttered interface,
+     * the alerts also offer a dismissible feature, enabling them to close the message after acknowledgment. Through all its configurations, the Alert component ensures that key communications remain prominent and clear.
+     */
     interface IniAlert {
+        /**
+          * Allows you to hide the alert if the close button is clicked
+         */
         "dismissible"?: boolean;
+        /**
+          * (optional) The title of the alert that accompanies the content
+         */
         "headerTitle"?: string;
+        /**
+          * Context of the alert, if it is an error message: `danger`, an action which is successful: `success` ...
+         */
         "variant"?: "primary" | "secondary" | "success" | "danger" | "warning" | "info";
     }
+    /**
+     * The Badge component is a compact yet powerful means of showcasing status, highlighting states, or drawing attention to specific data points.
+     * With its minimalist design, it effortlessly integrates into various UI contexts, making it a go-to for concise visual feedback
+     */
     interface IniBadge {
         "variant"?: "primary" | "secondary" | "success" | "danger" | "warning" | "info";
     }
+    /**
+     * The Button component stands as an interactive gateway, inviting users to take action, navigate, or submit.
+     * With its versatile design, it can signal importance, set priorities, or provide navigational cues.
+     * Whether beckoning a user to 'Learn More', confirming a choice with 'Submit', or pausing a task with 'Cancel', the Button ensures every interaction is clear and intentional.
+     */
     interface IniButton {
         "disabled"?: boolean;
         "extraClass"?: string;
@@ -210,10 +359,18 @@ declare namespace LocalJSX {
         "size"?: "small" | "medium" | "large";
         "variant"?: "primary" | "secondary" | "success" | "danger" | "warning" | "info";
     }
+    /**
+     * The Card component acts as a versatile container, framing content with a clear visual boundary. Whether showcasing snippets of text,
+     * hosting other UI components, or spotlighting information with an optional title, the Card offers a neat and structured presentation.
+     * It effectively organizes and emphasizes content, ensuring that information stands out in an engaging manner.
+     */
     interface IniCard {
         "headerTitle"?: string;
     }
     /**
+     * The Date Picker component simplifies the task of selecting dates by providing a user-friendly interface.
+     * Whether setting an appointment, scheduling an event, or marking a milestone, it seamlessly integrates into forms and interfaces.
+     * With intuitive navigation through days, months, and years, the Date Picker ensures that capturing a specific date or date range is both precise and effortless.
      * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
      */
     interface IniDatePicker {
@@ -226,6 +383,9 @@ declare namespace LocalJSX {
         "value"?: string;
     }
     /**
+     * The Date Range Picker component streamlines the process of selecting a span of dates. Ideal for defining periods such as booking intervals,
+     * financial quarters, or event durations, it offers an intuitive interface to capture both start and end dates. Its user-centric design ensures
+     * that selecting consecutive days or disparate intervals is straightforward, providing clarity and precision in every date range selection.
      * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
      */
     interface IniDateRangePicker {
@@ -240,6 +400,12 @@ declare namespace LocalJSX {
         "startPlaceholder"?: string;
         "startValue"?: string;
     }
+    /**
+     * The Dropdown component offers a compact way to present multiple options without overwhelming the interface.
+     * By clicking or hovering, users can unveil a list of choices, making selections both space-efficient and user-friendly.
+     * Whether used for navigation, action lists, or form inputs, the Dropdown ensures a smooth experience, guiding users through their options with elegance and simplicity.
+     * This component use the Popper library : https://popper.js.org/docs/v2/
+     */
     interface IniDropdown {
         "disabled"?: boolean;
         "label"?: string;
@@ -247,6 +413,11 @@ declare namespace LocalJSX {
         "placement"?: "top" | "bottom" | "right" | "left";
         "size"?: "small" | "medium" | "large";
     }
+    /**
+     * Form Input components are the essential touchpoints of user data entry. From simple text fields capturing names to specialized inputs like emails or color pickers,
+     * they transform user interactions into actionable data. Designed for clarity and ease of use, these components ensure that users effortlessly provide information,
+     * whether its personal details, preferences, or any specific input. Every interaction is optimized for accuracy, ensuring data integrity across varied input types.
+     */
     interface IniInput {
         "disabled"?: boolean;
         /**
@@ -266,6 +437,11 @@ declare namespace LocalJSX {
         "type"?: "text" | "password" | "email" | "number" | "search" | "tel" | "url" | "color" | "file" | "textarea";
         "value"?: string;
     }
+    /**
+     * The Modal component emerges as a focused overlay, capturing users' full attention to deliver essential content or actions.
+     * Whether presenting vital information, confirming user decisions, or offering supplemental details, the Modal provides an immersive environment, momentarily separating users from the main interface.
+     * Its distinct presence ensures that the information or actions within are both central and prioritized, facilitating focused interactions.
+     */
     interface IniModal {
         "centerY"?: boolean;
         "closeLabel"?: string;
@@ -273,7 +449,11 @@ declare namespace LocalJSX {
         "open"?: boolean;
     }
     /**
-     * Select control
+     * The Select control offers an intuitive way to present a list of options to users. It allows for easy single or multiple selections from a dropdown menu.
+     * Additionally, some select controls provide the ability to search or type in text, offering users an even more streamlined experience.
+     * Whether you're choosing from a predefined list or inputting new information, the Select control is designed to handle both with efficiency.
+     * Plus, with built-in functions for adding or removing options, it ensures a dynamic user interaction that adapts to various needs.
+     * This component use TomSelect library : https://tom-select.js.org/docs/
      */
     interface IniSelect {
         "allowEmpty"?: boolean;
@@ -281,9 +461,26 @@ declare namespace LocalJSX {
         "multiple"?: boolean;
         "name"?: string;
         "placeholder"?: string;
+        /**
+          * Pass the values selected by default (for multiple values must be used a delimiter between the values example: `apple,grape,orange`)
+         */
+        "selected"?: string;
     }
+    /**
+     * The Tooltip component acts as a brief informational aide, offering users additional context or guidance when they hover or focus on an element.
+     * Subtle yet informative, it unveils insights without disrupting the user flow. Whether elucidating an icon's function,
+     * providing supplementary data, or explaining a term, the Tooltip ensures clarity is just a hover away.
+     * > The content which must display the tooltip when hovering must be wrapped by `<ini-tooltip>`, can be text, button, any other elements
+     * This component use the Popper library : https://popper.js.org/docs/v2/
+     */
     interface IniTooltip {
+        /**
+          * Where should the tooltip be displayed by bringing the element, if the tooltip leaves the parent container, then it will be replaced automatically
+         */
         "placement"?: "top" | "bottom" | "right" | "left";
+        /**
+          * The content to display in the tooltip when hovering
+         */
         "titleContent"?: string;
     }
     interface IntrinsicElements {
@@ -304,25 +501,78 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            /**
+             * The Alert component serves as a dynamic container for conveying vital notifications and messages.
+             * Depending on the context, alerts can adopt various types such as Primary, Danger, Success, Warning, and other relevant variants. Each type visually signifies its importance and relevance.
+             * Additionally, to enhance clarity and emphasis, alerts can be complemented with a title. For users desiring an uncluttered interface,
+             * the alerts also offer a dismissible feature, enabling them to close the message after acknowledgment. Through all its configurations, the Alert component ensures that key communications remain prominent and clear.
+             */
             "ini-alert": LocalJSX.IniAlert & JSXBase.HTMLAttributes<HTMLIniAlertElement>;
+            /**
+             * The Badge component is a compact yet powerful means of showcasing status, highlighting states, or drawing attention to specific data points.
+             * With its minimalist design, it effortlessly integrates into various UI contexts, making it a go-to for concise visual feedback
+             */
             "ini-badge": LocalJSX.IniBadge & JSXBase.HTMLAttributes<HTMLIniBadgeElement>;
+            /**
+             * The Button component stands as an interactive gateway, inviting users to take action, navigate, or submit.
+             * With its versatile design, it can signal importance, set priorities, or provide navigational cues.
+             * Whether beckoning a user to 'Learn More', confirming a choice with 'Submit', or pausing a task with 'Cancel', the Button ensures every interaction is clear and intentional.
+             */
             "ini-button": LocalJSX.IniButton & JSXBase.HTMLAttributes<HTMLIniButtonElement>;
+            /**
+             * The Card component acts as a versatile container, framing content with a clear visual boundary. Whether showcasing snippets of text,
+             * hosting other UI components, or spotlighting information with an optional title, the Card offers a neat and structured presentation.
+             * It effectively organizes and emphasizes content, ensuring that information stands out in an engaging manner.
+             */
             "ini-card": LocalJSX.IniCard & JSXBase.HTMLAttributes<HTMLIniCardElement>;
             /**
+             * The Date Picker component simplifies the task of selecting dates by providing a user-friendly interface.
+             * Whether setting an appointment, scheduling an event, or marking a milestone, it seamlessly integrates into forms and interfaces.
+             * With intuitive navigation through days, months, and years, the Date Picker ensures that capturing a specific date or date range is both precise and effortless.
              * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
              */
             "ini-date-picker": LocalJSX.IniDatePicker & JSXBase.HTMLAttributes<HTMLIniDatePickerElement>;
             /**
+             * The Date Range Picker component streamlines the process of selecting a span of dates. Ideal for defining periods such as booking intervals,
+             * financial quarters, or event durations, it offers an intuitive interface to capture both start and end dates. Its user-centric design ensures
+             * that selecting consecutive days or disparate intervals is straightforward, providing clarity and precision in every date range selection.
              * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
              */
             "ini-date-range-picker": LocalJSX.IniDateRangePicker & JSXBase.HTMLAttributes<HTMLIniDateRangePickerElement>;
+            /**
+             * The Dropdown component offers a compact way to present multiple options without overwhelming the interface.
+             * By clicking or hovering, users can unveil a list of choices, making selections both space-efficient and user-friendly.
+             * Whether used for navigation, action lists, or form inputs, the Dropdown ensures a smooth experience, guiding users through their options with elegance and simplicity.
+             * This component use the Popper library : https://popper.js.org/docs/v2/
+             */
             "ini-dropdown": LocalJSX.IniDropdown & JSXBase.HTMLAttributes<HTMLIniDropdownElement>;
+            /**
+             * Form Input components are the essential touchpoints of user data entry. From simple text fields capturing names to specialized inputs like emails or color pickers,
+             * they transform user interactions into actionable data. Designed for clarity and ease of use, these components ensure that users effortlessly provide information,
+             * whether its personal details, preferences, or any specific input. Every interaction is optimized for accuracy, ensuring data integrity across varied input types.
+             */
             "ini-input": LocalJSX.IniInput & JSXBase.HTMLAttributes<HTMLIniInputElement>;
+            /**
+             * The Modal component emerges as a focused overlay, capturing users' full attention to deliver essential content or actions.
+             * Whether presenting vital information, confirming user decisions, or offering supplemental details, the Modal provides an immersive environment, momentarily separating users from the main interface.
+             * Its distinct presence ensures that the information or actions within are both central and prioritized, facilitating focused interactions.
+             */
             "ini-modal": LocalJSX.IniModal & JSXBase.HTMLAttributes<HTMLIniModalElement>;
             /**
-             * Select control
+             * The Select control offers an intuitive way to present a list of options to users. It allows for easy single or multiple selections from a dropdown menu.
+             * Additionally, some select controls provide the ability to search or type in text, offering users an even more streamlined experience.
+             * Whether you're choosing from a predefined list or inputting new information, the Select control is designed to handle both with efficiency.
+             * Plus, with built-in functions for adding or removing options, it ensures a dynamic user interaction that adapts to various needs.
+             * This component use TomSelect library : https://tom-select.js.org/docs/
              */
             "ini-select": LocalJSX.IniSelect & JSXBase.HTMLAttributes<HTMLIniSelectElement>;
+            /**
+             * The Tooltip component acts as a brief informational aide, offering users additional context or guidance when they hover or focus on an element.
+             * Subtle yet informative, it unveils insights without disrupting the user flow. Whether elucidating an icon's function,
+             * providing supplementary data, or explaining a term, the Tooltip ensures clarity is just a hover away.
+             * > The content which must display the tooltip when hovering must be wrapped by `<ini-tooltip>`, can be text, button, any other elements
+             * This component use the Popper library : https://popper.js.org/docs/v2/
+             */
             "ini-tooltip": LocalJSX.IniTooltip & JSXBase.HTMLAttributes<HTMLIniTooltipElement>;
         }
     }

@@ -1,6 +1,13 @@
 import {Component, Element, Host, h, Listen, Prop} from '@stencil/core';
 import {createPopper, Instance} from "@popperjs/core";
 
+/**
+ * The Dropdown component offers a compact way to present multiple options without overwhelming the interface.
+ * By clicking or hovering, users can unveil a list of choices, making selections both space-efficient and user-friendly.
+ * Whether used for navigation, action lists, or form inputs, the Dropdown ensures a smooth experience, guiding users through their options with elegance and simplicity.
+ *
+ * This component use the Popper library : https://popper.js.org/docs/v2/
+ */
 @Component({
     tag: 'ini-dropdown',
     styleUrl: 'ini-dropdown.scss',

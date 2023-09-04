@@ -4,10 +4,13 @@ export function parseArgs(args = {}) {
         .join(' ');
 }
 
-export function getRenderComponent(tag) {
+export function getRenderComponent(tag, minHeight = 0, margin = 0, preRender = '') {
     return {
         render: ({children = '', ...args}) => {
-            return `<${tag} ${parseArgs(args)}>${children}</${tag}>`;
-        }
+            return `${preRender}<${tag} ${parseArgs(args)}>${children}</${tag}>`;
+        },
+        decorators: [
+            (Story) => `<div style="min-height: ${minHeight}px;margin: ${margin}px">${Story()}</div>`
+        ]
     }
 }

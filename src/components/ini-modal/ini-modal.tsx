@@ -1,5 +1,10 @@
 import {Component, Host, h, Prop, Element} from '@stencil/core';
 
+/**
+ * The Modal component emerges as a focused overlay, capturing users' full attention to deliver essential content or actions.
+ * Whether presenting vital information, confirming user decisions, or offering supplemental details, the Modal provides an immersive environment, momentarily separating users from the main interface.
+ * Its distinct presence ensures that the information or actions within are both central and prioritized, facilitating focused interactions.
+ */
 @Component({
     tag: 'ini-modal',
     styleUrl: 'ini-modal.scss',

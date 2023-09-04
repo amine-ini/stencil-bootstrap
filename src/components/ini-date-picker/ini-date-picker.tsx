@@ -2,6 +2,10 @@ import {Component, Host, h, Prop} from '@stencil/core';
 import Datepicker from 'vanillajs-datepicker/js/Datepicker.js';
 
 /**
+ * The Date Picker component simplifies the task of selecting dates by providing a user-friendly interface.
+ * Whether setting an appointment, scheduling an event, or marking a milestone, it seamlessly integrates into forms and interfaces.
+ * With intuitive navigation through days, months, and years, the Date Picker ensures that capturing a specific date or date range is both precise and effortless.
+ *
  * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
  */
 @Component({

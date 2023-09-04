@@ -8,7 +8,7 @@ export default {
     ...getRenderComponent(tagName)
 };
 
-export const Primary = {
+export const Overview = {
     args: {
         suffixIcon: 'fa-solid fa-home',
         label: 'We need you informations',
