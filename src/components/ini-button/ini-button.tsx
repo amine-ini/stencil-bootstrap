@@ -4,6 +4,8 @@ import {Component, Event, EventEmitter, h, Host, Prop} from '@stencil/core';
  * The Button component stands as an interactive gateway, inviting users to take action, navigate, or submit.
  * With its versatile design, it can signal importance, set priorities, or provide navigational cues.
  * Whether beckoning a user to 'Learn More', confirming a choice with 'Submit', or pausing a task with 'Cancel', the Button ensures every interaction is clear and intentional.
+ *
+ * > When the `create` button is applied, then the `variant` and `outline` props no longer have priority
  */
 @Component({
     tag: 'ini-button',
