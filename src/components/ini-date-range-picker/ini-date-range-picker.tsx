@@ -17,24 +17,34 @@ export class IniDatePicker {
 
     @Element() el: HTMLElement;
 
+    /** The date format */
     @Prop() dateFormat: string = "dd/mm/yyyy";
 
+    /** The text label to display before input */
     @Prop() label: string = "";
 
+    /** Disable input, user can't have any interaction */
     @Prop() disabled: boolean = false;
 
+    /** A help message for the input */
     @Prop() helpText: string = "";
 
+    /** The name of the *start date* input in the form */
     @Prop() startName: string = "";
 
+    /** The default *start date* value */
     @Prop() startValue: string = "";
 
+    /** The *start date* placeholder */
     @Prop() startPlaceholder: string = "";
 
+    /** The name of the *end date* input in the form */
     @Prop() endName: string = "";
 
+    /** The default *end date* value */
     @Prop() endValue: string = "";
 
+    /** The *end date* placeholder */
     @Prop() endPlaceholder: string = "";
 
     componentDidLoad() {

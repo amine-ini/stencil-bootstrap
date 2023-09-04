@@ -1,5 +1,5 @@
 {
-  "timestamp": "2023-09-04T15:35:03",
+  "timestamp": "2023-09-04T17:46:13",
   "compiler": {
     "name": "@stencil/core",
     "version": "4.1.0",
@@ -130,7 +130,7 @@
           "mutable": false,
           "attr": "variant",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Variant color of badge",
           "docsTags": [],
           "default": "\"primary\"",
           "values": [
@@ -192,7 +192,7 @@
           "mutable": false,
           "attr": "disabled",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Disable button, user can't have any interaction",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -214,7 +214,7 @@
           "mutable": false,
           "attr": "extra-class",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Additional CSS class to add to the `<button>` if necessary",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -236,7 +236,7 @@
           "mutable": false,
           "attr": "outline",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Remove the background and highlight the borders",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -258,7 +258,7 @@
           "mutable": false,
           "attr": "size",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Button size",
           "docsTags": [],
           "default": "\"medium\"",
           "values": [
@@ -289,7 +289,7 @@
           "mutable": false,
           "attr": "variant",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Color variants of button",
           "docsTags": [],
           "default": "\"primary\"",
           "values": [
@@ -335,7 +335,7 @@
           },
           "cancelable": true,
           "composed": true,
-          "docs": "",
+          "docs": "When user click on button",
           "docsTags": []
         }
       ],
@@ -376,7 +376,7 @@
           "mutable": false,
           "attr": "header-title",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "(Optional) the title of the card in the header",
           "docsTags": [],
           "values": [
             {
@@ -416,7 +416,7 @@
           "mutable": false,
           "attr": "date-format",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The date format",
           "docsTags": [],
           "default": "\"dd/mm/yyyy\"",
           "values": [
@@ -438,7 +438,7 @@
           "mutable": false,
           "attr": "disabled",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Disable input, user can't have any interaction",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -460,7 +460,7 @@
           "mutable": false,
           "attr": "help-text",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "A help message for the input",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -482,7 +482,7 @@
           "mutable": false,
           "attr": "label",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The text label to display before input",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -504,7 +504,7 @@
           "mutable": false,
           "attr": "name",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The name of the input in the form",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -526,7 +526,7 @@
           "mutable": false,
           "attr": "placeholder",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The placeholder",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -548,7 +548,7 @@
           "mutable": false,
           "attr": "value",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The default date value",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -595,7 +595,7 @@
           "mutable": false,
           "attr": "date-format",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The date format",
           "docsTags": [],
           "default": "\"dd/mm/yyyy\"",
           "values": [
@@ -617,7 +617,7 @@
           "mutable": false,
           "attr": "disabled",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Disable input, user can't have any interaction",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -639,7 +639,7 @@
           "mutable": false,
           "attr": "end-name",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The name of the *end date* input in the form",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -661,7 +661,7 @@
           "mutable": false,
           "attr": "end-placeholder",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The *end date* placeholder",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -683,7 +683,7 @@
           "mutable": false,
           "attr": "end-value",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The default *end date* value",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -705,7 +705,7 @@
           "mutable": false,
           "attr": "help-text",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "A help message for the input",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -727,7 +727,7 @@
           "mutable": false,
           "attr": "label",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The text label to display before input",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -749,7 +749,7 @@
           "mutable": false,
           "attr": "start-name",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The name of the *start date* input in the form",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -771,7 +771,7 @@
           "mutable": false,
           "attr": "start-placeholder",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The *start date* placeholder",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -793,7 +793,7 @@
           "mutable": false,
           "attr": "start-value",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The default *start date* value",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -840,7 +840,7 @@
           "mutable": false,
           "attr": "disabled",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Disable Dropdown trigger button, user can't have any interaction",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -862,7 +862,7 @@
           "mutable": false,
           "attr": "label",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The label to display inside dropdown trigger button",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -884,7 +884,7 @@
           "mutable": false,
           "attr": "outline",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Remove the background and highlight the borders",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -906,7 +906,7 @@
           "mutable": false,
           "attr": "placement",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The default location when opening the dropdown",
           "docsTags": [],
           "default": "\"bottom\"",
           "values": [
@@ -941,7 +941,7 @@
           "mutable": false,
           "attr": "size",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The Dropdown trigger button size",
           "docsTags": [],
           "default": "\"medium\"",
           "values": [
@@ -1004,7 +1004,7 @@
           "mutable": false,
           "attr": "disabled",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Disable input, user can't have any interaction",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -1048,7 +1048,7 @@
           "mutable": false,
           "attr": "help-text",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "A help message for the input",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -1070,7 +1070,7 @@
           "mutable": false,
           "attr": "inline",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Show input and label on a single line",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -1092,7 +1092,7 @@
           "mutable": false,
           "attr": "label",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The text label to display before input",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -1114,7 +1114,7 @@
           "mutable": false,
           "attr": "name",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The name of the input in the form",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -1136,7 +1136,7 @@
           "mutable": false,
           "attr": "placeholder",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The placeholder",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -1158,7 +1158,7 @@
           "mutable": false,
           "attr": "prefix-icon",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Icon to display as prefix of the input `example: fa-solid fa-user or zmdi-user...`",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -1180,7 +1180,7 @@
           "mutable": false,
           "attr": "prefix-text",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Text to display as prefix of the input",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -1202,7 +1202,7 @@
           "mutable": false,
           "attr": "size",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The input size",
           "docsTags": [],
           "default": "\"medium\"",
           "values": [
@@ -1233,7 +1233,7 @@
           "mutable": false,
           "attr": "suffix-icon",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Icon to display as suffix of the input `example: fa-solid fa-user or zmdi-user...`",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -1255,7 +1255,7 @@
           "mutable": false,
           "attr": "suffix-text",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Text to display as suffix of the input",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -1277,7 +1277,7 @@
           "mutable": false,
           "attr": "type",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The type of input in the form",
           "docsTags": [],
           "default": "\"text\"",
           "values": [
@@ -1336,7 +1336,7 @@
           "mutable": false,
           "attr": "value",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The default value of input",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -1414,7 +1414,7 @@
           "mutable": false,
           "attr": "center-y",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Center the modal vertically",
           "docsTags": [],
           "default": "true",
           "values": [
@@ -1436,7 +1436,7 @@
           "mutable": false,
           "attr": "close-label",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The close button label",
           "docsTags": [],
           "values": [
             {
@@ -1457,7 +1457,7 @@
           "mutable": false,
           "attr": "header-title",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The title in the modal header",
           "docsTags": [],
           "values": [
             {
@@ -1478,7 +1478,7 @@
           "mutable": true,
           "attr": "open",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Open or close the modal",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -1525,7 +1525,7 @@
           "mutable": false,
           "attr": "allow-empty",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "May be empty",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -1547,12 +1547,78 @@
           "mutable": false,
           "attr": "disabled",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Disable select, user can't have any interaction",
           "docsTags": [],
           "default": "false",
           "values": [
             {
               "type": "boolean"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "groupId",
+          "type": "string",
+          "complexType": {
+            "original": "string",
+            "resolved": "string",
+            "references": {}
+          },
+          "mutable": true,
+          "attr": "group-id",
+          "reflectToAttr": false,
+          "docs": "The id value for select and label attributes",
+          "docsTags": [],
+          "default": "\"\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "helpText",
+          "type": "string",
+          "complexType": {
+            "original": "string",
+            "resolved": "string",
+            "references": {}
+          },
+          "mutable": false,
+          "attr": "help-text",
+          "reflectToAttr": false,
+          "docs": "A help message for the select",
+          "docsTags": [],
+          "default": "\"\"",
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "label",
+          "type": "string",
+          "complexType": {
+            "original": "string",
+            "resolved": "string",
+            "references": {}
+          },
+          "mutable": false,
+          "attr": "label",
+          "reflectToAttr": false,
+          "docs": "The text label to display before select",
+          "docsTags": [],
+          "default": "\"\"",
+          "values": [
+            {
+              "type": "string"
             }
           ],
           "optional": false,
@@ -1569,7 +1635,7 @@
           "mutable": false,
           "attr": "multiple",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "Can have and select multiple values",
           "docsTags": [],
           "default": "false",
           "values": [
@@ -1591,7 +1657,7 @@
           "mutable": false,
           "attr": "name",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The name of the select input in the form",
           "docsTags": [],
           "default": "\"\"",
           "values": [
@@ -1613,7 +1679,7 @@
           "mutable": false,
           "attr": "placeholder",
           "reflectToAttr": false,
-          "docs": "",
+          "docs": "The placeholder",
           "docsTags": [],
           "default": "\"\"",
           "values": [

@@ -14,12 +14,16 @@ export class IniModal {
 
     @Element() el: HTMLElement;
 
+    /** Open or close the modal */
     @Prop({mutable: true}) open: boolean = false;
 
+    /** The title in the modal header */
     @Prop() headerTitle: string;
 
+    /** The close button label */
     @Prop() closeLabel: string;
 
+    /** Center the modal vertically */
     @Prop() centerY: boolean = true;
 
     dialogElement: HTMLElement

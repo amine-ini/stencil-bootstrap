@@ -42,10 +42,25 @@ export namespace Components {
      * Whether beckoning a user to 'Learn More', confirming a choice with 'Submit', or pausing a task with 'Cancel', the Button ensures every interaction is clear and intentional.
      */
     interface IniButton {
+        /**
+          * Disable button, user can't have any interaction
+         */
         "disabled": boolean;
+        /**
+          * Additional CSS class to add to the `<button>` if necessary
+         */
         "extraClass": string;
+        /**
+          * Remove the background and highlight the borders
+         */
         "outline": boolean;
+        /**
+          * Button size
+         */
         "size": "small" | "medium" | "large";
+        /**
+          * Color variants of button
+         */
         "variant": "primary" | "secondary" | "success" | "danger" | "warning" | "info";
     }
     /**
@@ -54,6 +69,9 @@ export namespace Components {
      * It effectively organizes and emphasizes content, ensuring that information stands out in an engaging manner.
      */
     interface IniCard {
+        /**
+          * (Optional) the title of the card in the header
+         */
         "headerTitle": string;
     }
     /**
@@ -63,12 +81,33 @@ export namespace Components {
      * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
      */
     interface IniDatePicker {
+        /**
+          * The date format
+         */
         "dateFormat": string;
+        /**
+          * Disable input, user can't have any interaction
+         */
         "disabled": boolean;
+        /**
+          * A help message for the input
+         */
         "helpText": string;
+        /**
+          * The text label to display before input
+         */
         "label": string;
+        /**
+          * The name of the input in the form
+         */
         "name": string;
+        /**
+          * The placeholder
+         */
         "placeholder": string;
+        /**
+          * The default date value
+         */
         "value": string;
     }
     /**
@@ -78,15 +117,45 @@ export namespace Components {
      * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
      */
     interface IniDateRangePicker {
+        /**
+          * The date format
+         */
         "dateFormat": string;
+        /**
+          * Disable input, user can't have any interaction
+         */
         "disabled": boolean;
+        /**
+          * The name of the *end date* input in the form
+         */
         "endName": string;
+        /**
+          * The *end date* placeholder
+         */
         "endPlaceholder": string;
+        /**
+          * The default *end date* value
+         */
         "endValue": string;
+        /**
+          * A help message for the input
+         */
         "helpText": string;
+        /**
+          * The text label to display before input
+         */
         "label": string;
+        /**
+          * The name of the *start date* input in the form
+         */
         "startName": string;
+        /**
+          * The *start date* placeholder
+         */
         "startPlaceholder": string;
+        /**
+          * The default *start date* value
+         */
         "startValue": string;
     }
     /**
@@ -96,10 +165,25 @@ export namespace Components {
      * This component use the Popper library : https://popper.js.org/docs/v2/
      */
     interface IniDropdown {
+        /**
+          * Disable Dropdown trigger button, user can't have any interaction
+         */
         "disabled": boolean;
+        /**
+          * The label to display inside dropdown trigger button
+         */
         "label": string;
+        /**
+          * Remove the background and highlight the borders
+         */
         "outline": boolean;
+        /**
+          * The default location when opening the dropdown
+         */
         "placement": "top" | "bottom" | "right" | "left";
+        /**
+          * The Dropdown trigger button size
+         */
         "size": "small" | "medium" | "large";
     }
     /**
@@ -108,23 +192,62 @@ export namespace Components {
      * whether its personal details, preferences, or any specific input. Every interaction is optimized for accuracy, ensuring data integrity across varied input types.
      */
     interface IniInput {
+        /**
+          * Disable input, user can't have any interaction
+         */
         "disabled": boolean;
         "getInputRef": () => Promise<HTMLElement>;
         /**
           * The id value for input and label attributes
          */
         "groupId": string;
+        /**
+          * A help message for the input
+         */
         "helpText": string;
+        /**
+          * Show input and label on a single line
+         */
         "inline": boolean;
+        /**
+          * The text label to display before input
+         */
         "label": string;
+        /**
+          * The name of the input in the form
+         */
         "name": string;
+        /**
+          * The placeholder
+         */
         "placeholder": string;
+        /**
+          * Icon to display as prefix of the input `example: fa-solid fa-user or zmdi-user...`
+         */
         "prefixIcon": string;
+        /**
+          * Text to display as prefix of the input
+         */
         "prefixText": string;
+        /**
+          * The input size
+         */
         "size": "small" | "medium" | "large";
+        /**
+          * Icon to display as suffix of the input `example: fa-solid fa-user or zmdi-user...`
+         */
         "suffixIcon": string;
+        /**
+          * Text to display as suffix of the input
+         */
         "suffixText": string;
+        /**
+          * The type of input in the form
+         */
         "type": "text" | "password" | "email" | "number" | "search" | "tel" | "url" | "color" | "file" | "textarea";
+        /**
+          * The default value of input
+         */
         "value": string;
     }
     /**
@@ -133,9 +256,21 @@ export namespace Components {
      * Its distinct presence ensures that the information or actions within are both central and prioritized, facilitating focused interactions.
      */
     interface IniModal {
+        /**
+          * Center the modal vertically
+         */
         "centerY": boolean;
+        /**
+          * The close button label
+         */
         "closeLabel": string;
+        /**
+          * The title in the modal header
+         */
         "headerTitle": string;
+        /**
+          * Open or close the modal
+         */
         "open": boolean;
     }
     /**
@@ -146,10 +281,37 @@ export namespace Components {
      * This component use TomSelect library : https://tom-select.js.org/docs/
      */
     interface IniSelect {
+        /**
+          * May be empty
+         */
         "allowEmpty": boolean;
+        /**
+          * Disable select, user can't have any interaction
+         */
         "disabled": boolean;
+        /**
+          * The id value for select and label attributes
+         */
+        "groupId": string;
+        /**
+          * A help message for the select
+         */
+        "helpText": string;
+        /**
+          * The text label to display before select
+         */
+        "label": string;
+        /**
+          * Can have and select multiple values
+         */
         "multiple": boolean;
+        /**
+          * The name of the select input in the form
+         */
         "name": string;
+        /**
+          * The placeholder
+         */
         "placeholder": string;
         /**
           * Pass the values selected by default (for multiple values must be used a delimiter between the values example: `apple,grape,orange`)
@@ -358,11 +520,29 @@ declare namespace LocalJSX {
      * Whether beckoning a user to 'Learn More', confirming a choice with 'Submit', or pausing a task with 'Cancel', the Button ensures every interaction is clear and intentional.
      */
     interface IniButton {
+        /**
+          * Disable button, user can't have any interaction
+         */
         "disabled"?: boolean;
+        /**
+          * Additional CSS class to add to the `<button>` if necessary
+         */
         "extraClass"?: string;
+        /**
+          * When user click on button
+         */
         "onIniClick"?: (event: IniButtonCustomEvent<any>) => void;
+        /**
+          * Remove the background and highlight the borders
+         */
         "outline"?: boolean;
+        /**
+          * Button size
+         */
         "size"?: "small" | "medium" | "large";
+        /**
+          * Color variants of button
+         */
         "variant"?: "primary" | "secondary" | "success" | "danger" | "warning" | "info";
     }
     /**
@@ -371,6 +551,9 @@ declare namespace LocalJSX {
      * It effectively organizes and emphasizes content, ensuring that information stands out in an engaging manner.
      */
     interface IniCard {
+        /**
+          * (Optional) the title of the card in the header
+         */
         "headerTitle"?: string;
     }
     /**
@@ -380,12 +563,33 @@ declare namespace LocalJSX {
      * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
      */
     interface IniDatePicker {
+        /**
+          * The date format
+         */
         "dateFormat"?: string;
+        /**
+          * Disable input, user can't have any interaction
+         */
         "disabled"?: boolean;
+        /**
+          * A help message for the input
+         */
         "helpText"?: string;
+        /**
+          * The text label to display before input
+         */
         "label"?: string;
+        /**
+          * The name of the input in the form
+         */
         "name"?: string;
+        /**
+          * The placeholder
+         */
         "placeholder"?: string;
+        /**
+          * The default date value
+         */
         "value"?: string;
     }
     /**
@@ -395,15 +599,45 @@ declare namespace LocalJSX {
      * Documentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker
      */
     interface IniDateRangePicker {
+        /**
+          * The date format
+         */
         "dateFormat"?: string;
+        /**
+          * Disable input, user can't have any interaction
+         */
         "disabled"?: boolean;
+        /**
+          * The name of the *end date* input in the form
+         */
         "endName"?: string;
+        /**
+          * The *end date* placeholder
+         */
         "endPlaceholder"?: string;
+        /**
+          * The default *end date* value
+         */
         "endValue"?: string;
+        /**
+          * A help message for the input
+         */
         "helpText"?: string;
+        /**
+          * The text label to display before input
+         */
         "label"?: string;
+        /**
+          * The name of the *start date* input in the form
+         */
         "startName"?: string;
+        /**
+          * The *start date* placeholder
+         */
         "startPlaceholder"?: string;
+        /**
+          * The default *start date* value
+         */
         "startValue"?: string;
     }
     /**
@@ -413,10 +647,25 @@ declare namespace LocalJSX {
      * This component use the Popper library : https://popper.js.org/docs/v2/
      */
     interface IniDropdown {
+        /**
+          * Disable Dropdown trigger button, user can't have any interaction
+         */
         "disabled"?: boolean;
+        /**
+          * The label to display inside dropdown trigger button
+         */
         "label"?: string;
+        /**
+          * Remove the background and highlight the borders
+         */
         "outline"?: boolean;
+        /**
+          * The default location when opening the dropdown
+         */
         "placement"?: "top" | "bottom" | "right" | "left";
+        /**
+          * The Dropdown trigger button size
+         */
         "size"?: "small" | "medium" | "large";
     }
     /**
@@ -425,22 +674,61 @@ declare namespace LocalJSX {
      * whether its personal details, preferences, or any specific input. Every interaction is optimized for accuracy, ensuring data integrity across varied input types.
      */
     interface IniInput {
+        /**
+          * Disable input, user can't have any interaction
+         */
         "disabled"?: boolean;
         /**
           * The id value for input and label attributes
          */
         "groupId"?: string;
+        /**
+          * A help message for the input
+         */
         "helpText"?: string;
+        /**
+          * Show input and label on a single line
+         */
         "inline"?: boolean;
+        /**
+          * The text label to display before input
+         */
         "label"?: string;
+        /**
+          * The name of the input in the form
+         */
         "name"?: string;
+        /**
+          * The placeholder
+         */
         "placeholder"?: string;
+        /**
+          * Icon to display as prefix of the input `example: fa-solid fa-user or zmdi-user...`
+         */
         "prefixIcon"?: string;
+        /**
+          * Text to display as prefix of the input
+         */
         "prefixText"?: string;
+        /**
+          * The input size
+         */
         "size"?: "small" | "medium" | "large";
+        /**
+          * Icon to display as suffix of the input `example: fa-solid fa-user or zmdi-user...`
+         */
         "suffixIcon"?: string;
+        /**
+          * Text to display as suffix of the input
+         */
         "suffixText"?: string;
+        /**
+          * The type of input in the form
+         */
         "type"?: "text" | "password" | "email" | "number" | "search" | "tel" | "url" | "color" | "file" | "textarea";
+        /**
+          * The default value of input
+         */
         "value"?: string;
     }
     /**
@@ -449,9 +737,21 @@ declare namespace LocalJSX {
      * Its distinct presence ensures that the information or actions within are both central and prioritized, facilitating focused interactions.
      */
     interface IniModal {
+        /**
+          * Center the modal vertically
+         */
         "centerY"?: boolean;
+        /**
+          * The close button label
+         */
         "closeLabel"?: string;
+        /**
+          * The title in the modal header
+         */
         "headerTitle"?: string;
+        /**
+          * Open or close the modal
+         */
         "open"?: boolean;
     }
     /**
@@ -462,10 +762,37 @@ declare namespace LocalJSX {
      * This component use TomSelect library : https://tom-select.js.org/docs/
      */
     interface IniSelect {
+        /**
+          * May be empty
+         */
         "allowEmpty"?: boolean;
+        /**
+          * Disable select, user can't have any interaction
+         */
         "disabled"?: boolean;
+        /**
+          * The id value for select and label attributes
+         */
+        "groupId"?: string;
+        /**
+          * A help message for the select
+         */
+        "helpText"?: string;
+        /**
+          * The text label to display before select
+         */
+        "label"?: string;
+        /**
+          * Can have and select multiple values
+         */
         "multiple"?: boolean;
+        /**
+          * The name of the select input in the form
+         */
         "name"?: string;
+        /**
+          * The placeholder
+         */
         "placeholder"?: string;
         /**
           * Pass the values selected by default (for multiple values must be used a delimiter between the values example: `apple,grape,orange`)

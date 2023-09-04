@@ -12,16 +12,22 @@ import {Component, Event, EventEmitter, h, Host, Prop} from '@stencil/core';
 })
 export class IniButton {
 
+    /** Button size */
     @Prop() size: "small" | "medium" | "large" = "medium";
 
+    /** Color variants of button */
     @Prop() variant: "primary" | "secondary" | "success" | "danger" | "warning" | "info" = "primary";
 
+    /** Remove the background and highlight the borders */
     @Prop() outline: boolean = false;
 
+    /** Disable button, user can't have any interaction */
     @Prop() disabled: boolean = false;
 
+    /** Additional CSS class to add to the `<button>` if necessary */
     @Prop() extraClass: string = "";
 
+    /** When user click on button */
     @Event() iniClick: EventEmitter;
 
     render() {

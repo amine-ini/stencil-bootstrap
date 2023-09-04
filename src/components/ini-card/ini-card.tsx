@@ -11,6 +11,7 @@ import {Component, h, Host, Prop} from '@stencil/core';
     shadow: false,
 })
 export class IniCard {
+    /** (Optional) the title of the card in the header */
     @Prop() headerTitle: string;
 
     render() {

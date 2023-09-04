@@ -16,14 +16,19 @@ import {createPopper, Instance} from "@popperjs/core";
 export class IniDropdown {
     @Element() el: HTMLElement;
 
+    /** The label to display inside dropdown trigger button */
     @Prop() label: string = "";
 
+    /** The Dropdown trigger button size */
     @Prop() size: "small" | "medium" | "large" = "medium";
 
+    /** Remove the background and highlight the borders */
     @Prop() outline: boolean = false;
 
+    /** Disable Dropdown trigger button, user can't have any interaction */
     @Prop() disabled: boolean = false;
 
+    /** The default location when opening the dropdown */
     @Prop() placement: "top" | "bottom" | "right" | "left" = "bottom";
 
     private contentElement: HTMLElement;

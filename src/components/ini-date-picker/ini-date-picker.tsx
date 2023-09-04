@@ -17,18 +17,25 @@ export class IniDatePicker {
 
     private inputElement: HTMLIniInputElement;
 
+    /** The date format */
     @Prop() dateFormat: string = "dd/mm/yyyy";
 
+    /** The text label to display before input */
     @Prop() label: string = "";
 
+    /** The name of the input in the form */
     @Prop() name: string = "";
 
+    /** The default date value */
     @Prop() value: string = "";
 
+    /** The placeholder */
     @Prop() placeholder: string = "";
 
+    /** Disable input, user can't have any interaction */
     @Prop() disabled: boolean = false;
 
+    /** A help message for the input */
     @Prop() helpText: string = "";
 
     async componentDidLoad() {
