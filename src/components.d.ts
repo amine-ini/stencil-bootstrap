@@ -231,6 +231,10 @@ export namespace Components {
           * The Dropdown trigger button size
          */
         "size": "small" | "medium" | "large";
+        /**
+          * Color variants of dropdown trigger button
+         */
+        "variant": "primary" | "secondary" | "success" | "danger" | "warning" | "info";
     }
     /**
      * Form Input components are the essential touchpoints of user data entry. From simple text fields capturing names to specialized inputs like emails or color pickers,
@@ -782,6 +786,10 @@ declare namespace LocalJSX {
           * The Dropdown trigger button size
          */
         "size"?: "small" | "medium" | "large";
+        /**
+          * Color variants of dropdown trigger button
+         */
+        "variant"?: "primary" | "secondary" | "success" | "danger" | "warning" | "info";
     }
     /**
      * Form Input components are the essential touchpoints of user data entry. From simple text fields capturing names to specialized inputs like emails or color pickers,

@@ -21,6 +21,9 @@ export class IniDropdown {
     /** The label to display inside dropdown trigger button */
     @Prop() label: string = "";
 
+    /** Color variants of dropdown trigger button */
+    @Prop() variant: "primary" | "secondary" | "success" | "danger" | "warning" | "info" = "primary";
+
     /** The Dropdown trigger button size */
     @Prop() size: "small" | "medium" | "large" = "medium";
 
@@ -102,7 +105,7 @@ export class IniDropdown {
             <Host data-webcomponent={true}>
                 <div class="ini-dropdown">
                     <ini-button onIniClick={this.onTriggerClicked} extraClass="ini-dropdown-toggle"
-                                size={this.size} outline={this.outline} disabled={this.disabled}
+                                size={this.size} variant={this.variant} outline={this.outline} disabled={this.disabled}
                                 ref={ref => this.triggerElement = ref}>
                         {this.label}
                     </ini-button>

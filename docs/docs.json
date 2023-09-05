@@ -1,5 +1,5 @@
 {
-  "timestamp": "2023-09-05T07:51:04",
+  "timestamp": "2023-09-05T07:58:39",
   "compiler": {
     "name": "@stencil/core",
     "version": "4.1.0",
@@ -1180,6 +1180,49 @@
             },
             {
               "value": "small",
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
+        },
+        {
+          "name": "variant",
+          "type": "\"danger\" | \"info\" | \"primary\" | \"secondary\" | \"success\" | \"warning\"",
+          "complexType": {
+            "original": "\"primary\" | \"secondary\" | \"success\" | \"danger\" | \"warning\" | \"info\"",
+            "resolved": "\"danger\" | \"info\" | \"primary\" | \"secondary\" | \"success\" | \"warning\"",
+            "references": {}
+          },
+          "mutable": false,
+          "attr": "variant",
+          "reflectToAttr": false,
+          "docs": "Color variants of dropdown trigger button",
+          "docsTags": [],
+          "default": "\"primary\"",
+          "values": [
+            {
+              "value": "danger",
+              "type": "string"
+            },
+            {
+              "value": "info",
+              "type": "string"
+            },
+            {
+              "value": "primary",
+              "type": "string"
+            },
+            {
+              "value": "secondary",
+              "type": "string"
+            },
+            {
+              "value": "success",
+              "type": "string"
+            },
+            {
+              "value": "warning",
               "type": "string"
             }
           ],
