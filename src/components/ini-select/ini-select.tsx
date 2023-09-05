@@ -57,6 +57,7 @@ export class IniSelect {
 
     componentDidLoad() {
         new TomSelect(this.selectElement, {
+            plugins: ['remove_button'],
             allowEmptyOption: this.allowEmpty,
             items: this.innerSelected,
         });

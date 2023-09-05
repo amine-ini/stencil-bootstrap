@@ -5,3 +5,8 @@ $input-border-width: $border-width;
 @import "~tom-select/dist/scss/tom-select.bootstrap5";
 @import "~bootstrap/scss/forms/labels";
 @import "~bootstrap/scss/forms/form-text";
+
+.ts-wrapper.plugin-remove_button .item .remove {
+    border-left: 0 !important;
+    margin-left: 4px !important;
+}
