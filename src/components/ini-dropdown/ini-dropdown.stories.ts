@@ -9,11 +9,11 @@ export default {
 
 export const Overview = {
     args: {
-        label: 'Select country',
+        label: 'Select an action',
         outline: true,
-        children: `<span>🇫🇷 France</span>
-<span>🇪🇸 Espagne</span>
-<span>🇫🇮 Finlande</span>
-<span>🇮🇹 Italie</span>`
+        children: `<button>Create new invoice</button>
+<button>Duplicate</button>
+<button>Delete</button>
+<button>Mark as paid</button>`
     },
 };

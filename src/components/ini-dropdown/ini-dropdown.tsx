@@ -6,6 +6,8 @@ import {createPopper, Instance} from "@popperjs/core";
  * By clicking or hovering, users can unveil a list of choices, making selections both space-efficient and user-friendly.
  * Whether used for navigation, action lists, or form inputs, the Dropdown ensures a smooth experience, guiding users through their options with elegance and simplicity.
  *
+ * > You can use as direct child of the Dropdown a set of tag `<a href>` or `<button>`
+ *
  * This component use the Popper library : https://popper.js.org/docs/v2/
  */
 @Component({

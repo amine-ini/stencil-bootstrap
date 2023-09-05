@@ -1,1 +1,8 @@
 @import "~bootstrap/scss/card";
+
+ini-card[data-webcomponent] {
+    .ini-card-subtitle {
+        color: $secondary;
+        margin-bottom: $spacer * .5;
+    }
+}

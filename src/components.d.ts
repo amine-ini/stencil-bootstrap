@@ -78,6 +78,10 @@ export namespace Components {
           * (Optional) the title of the card in the header
          */
         "headerTitle": string;
+        /**
+          * (Optional) the subtitle of the card below header title
+         */
+        "subTitle": string;
     }
     /**
      * The Checkbox, Radio and Switch components serves as a versatile tool for capturing user choices. As a Checkbox/Switch it represents binary decisions or enables multi-select options.
@@ -203,6 +207,7 @@ export namespace Components {
      * The Dropdown component offers a compact way to present multiple options without overwhelming the interface.
      * By clicking or hovering, users can unveil a list of choices, making selections both space-efficient and user-friendly.
      * Whether used for navigation, action lists, or form inputs, the Dropdown ensures a smooth experience, guiding users through their options with elegance and simplicity.
+     * > You can use as direct child of the Dropdown a set of tag `<a href>` or `<button>`
      * This component use the Popper library : https://popper.js.org/docs/v2/
      */
     interface IniDropdown {
@@ -475,6 +480,7 @@ declare global {
      * The Dropdown component offers a compact way to present multiple options without overwhelming the interface.
      * By clicking or hovering, users can unveil a list of choices, making selections both space-efficient and user-friendly.
      * Whether used for navigation, action lists, or form inputs, the Dropdown ensures a smooth experience, guiding users through their options with elegance and simplicity.
+     * > You can use as direct child of the Dropdown a set of tag `<a href>` or `<button>`
      * This component use the Popper library : https://popper.js.org/docs/v2/
      */
     interface HTMLIniDropdownElement extends Components.IniDropdown, HTMLStencilElement {
@@ -623,6 +629,10 @@ declare namespace LocalJSX {
           * (Optional) the title of the card in the header
          */
         "headerTitle"?: string;
+        /**
+          * (Optional) the subtitle of the card below header title
+         */
+        "subTitle"?: string;
     }
     /**
      * The Checkbox, Radio and Switch components serves as a versatile tool for capturing user choices. As a Checkbox/Switch it represents binary decisions or enables multi-select options.
@@ -748,6 +758,7 @@ declare namespace LocalJSX {
      * The Dropdown component offers a compact way to present multiple options without overwhelming the interface.
      * By clicking or hovering, users can unveil a list of choices, making selections both space-efficient and user-friendly.
      * Whether used for navigation, action lists, or form inputs, the Dropdown ensures a smooth experience, guiding users through their options with elegance and simplicity.
+     * > You can use as direct child of the Dropdown a set of tag `<a href>` or `<button>`
      * This component use the Popper library : https://popper.js.org/docs/v2/
      */
     interface IniDropdown {
@@ -1001,6 +1012,7 @@ declare module "@stencil/core" {
              * The Dropdown component offers a compact way to present multiple options without overwhelming the interface.
              * By clicking or hovering, users can unveil a list of choices, making selections both space-efficient and user-friendly.
              * Whether used for navigation, action lists, or form inputs, the Dropdown ensures a smooth experience, guiding users through their options with elegance and simplicity.
+             * > You can use as direct child of the Dropdown a set of tag `<a href>` or `<button>`
              * This component use the Popper library : https://popper.js.org/docs/v2/
              */
             "ini-dropdown": LocalJSX.IniDropdown & JSXBase.HTMLAttributes<HTMLIniDropdownElement>;

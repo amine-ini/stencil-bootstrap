@@ -11,8 +11,12 @@ import {Component, h, Host, Prop} from '@stencil/core';
     shadow: false,
 })
 export class IniCard {
+
     /** (Optional) the title of the card in the header */
     @Prop() headerTitle: string;
+
+    /** (Optional) the subtitle of the card below header title */
+    @Prop() subTitle: string;
 
     render() {
         return (
@@ -20,6 +24,7 @@ export class IniCard {
                 <div class="ini-card">
                     <div class="ini-card-body">
                         {this.headerTitle && <h5 class="ini-card-title">{this.headerTitle}</h5>}
+                        {this.subTitle && <h6 class="ini-card-subtitle">{this.subTitle}</h6>}
                         <slot/>
                     </div>
                 </div>

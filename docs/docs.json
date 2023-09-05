@@ -1,5 +1,5 @@
 {
-  "timestamp": "2023-09-04T19:47:38",
+  "timestamp": "2023-09-05T07:51:04",
   "compiler": {
     "name": "@stencil/core",
     "version": "4.1.0",
@@ -177,7 +177,7 @@
       "filePath": "src/components/ini-button/ini-button.tsx",
       "encapsulation": "none",
       "tag": "ini-button",
-      "docs": "The Button component stands as an interactive gateway, inviting users to take action, navigate, or submit.\nWith its versatile design, it can signal importance, set priorities, or provide navigational cues.\nWhether beckoning a user to 'Learn More', confirming a choice with 'Submit', or pausing a task with 'Cancel', the Button ensures every interaction is clear and intentional.\n\n> When the `create` button is applied, then the `variant` and `outline` props no longer have priority",
+      "docs": "The Button component stands as an interactive gateway, inviting users to take action, navigate, or submit.\r\nWith its versatile design, it can signal importance, set priorities, or provide navigational cues.\r\nWhether beckoning a user to 'Learn More', confirming a choice with 'Submit', or pausing a task with 'Cancel', the Button ensures every interaction is clear and intentional.\r\n\r\n> When the `create` button is applied, then the `variant` and `outline` props no longer have priority",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -407,6 +407,27 @@
           ],
           "optional": false,
           "required": false
+        },
+        {
+          "name": "subTitle",
+          "type": "string",
+          "complexType": {
+            "original": "string",
+            "resolved": "string",
+            "references": {}
+          },
+          "mutable": false,
+          "attr": "sub-title",
+          "reflectToAttr": false,
+          "docs": "(Optional) the subtitle of the card below header title",
+          "docsTags": [],
+          "values": [
+            {
+              "type": "string"
+            }
+          ],
+          "optional": false,
+          "required": false
         }
       ],
       "methods": [],
@@ -423,7 +444,7 @@
       "filePath": "src/components/ini-choice/ini-choice.tsx",
       "encapsulation": "none",
       "tag": "ini-choice",
-      "docs": "The Checkbox, Radio and Switch components serves as a versatile tool for capturing user choices. As a Checkbox/Switch it represents binary decisions or enables multi-select options.\nWhen set as a Radio, it facilitates single-choice selections among a group of options. Employed in forms and various UI contexts, their states—whether checked,\nunchecked, or indeterminate—are clearly conveyed. Paired with intuitive labels, this component ensures user selections are both clear and accurate,\nadapting seamlessly based on the specified type.",
+      "docs": "The Checkbox, Radio and Switch components serves as a versatile tool for capturing user choices. As a Checkbox/Switch it represents binary decisions or enables multi-select options.\r\nWhen set as a Radio, it facilitates single-choice selections among a group of options. Employed in forms and various UI contexts, their states—whether checked,\r\nunchecked, or indeterminate—are clearly conveyed. Paired with intuitive labels, this component ensures user selections are both clear and accurate,\r\nadapting seamlessly based on the specified type.",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -605,7 +626,7 @@
       "filePath": "src/components/ini-date-picker/ini-date-picker.tsx",
       "encapsulation": "none",
       "tag": "ini-date-picker",
-      "docs": "The Date Picker component simplifies the task of selecting dates by providing a user-friendly interface.\nWhether setting an appointment, scheduling an event, or marking a milestone, it seamlessly integrates into forms and interfaces.\nWith intuitive navigation through days, months, and years, the Date Picker ensures that capturing a specific date or date range is both precise and effortless.\n\nDocumentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker",
+      "docs": "The Date Picker component simplifies the task of selecting dates by providing a user-friendly interface.\r\nWhether setting an appointment, scheduling an event, or marking a milestone, it seamlessly integrates into forms and interfaces.\r\nWith intuitive navigation through days, months, and years, the Date Picker ensures that capturing a specific date or date range is both precise and effortless.\r\n\r\nDocumentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -784,7 +805,7 @@
       "filePath": "src/components/ini-date-range-picker/ini-date-range-picker.tsx",
       "encapsulation": "none",
       "tag": "ini-date-range-picker",
-      "docs": "The Date Range Picker component streamlines the process of selecting a span of dates. Ideal for defining periods such as booking intervals,\nfinancial quarters, or event durations, it offers an intuitive interface to capture both start and end dates. Its user-centric design ensures\nthat selecting consecutive days or disparate intervals is straightforward, providing clarity and precision in every date range selection.\n\nDocumentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker",
+      "docs": "The Date Range Picker component streamlines the process of selecting a span of dates. Ideal for defining periods such as booking intervals,\r\nfinancial quarters, or event durations, it offers an intuitive interface to capture both start and end dates. Its user-centric design ensures\r\nthat selecting consecutive days or disparate intervals is straightforward, providing clarity and precision in every date range selection.\r\n\r\nDocumentation of used Datepicker : https://mymth.github.io/vanillajs-datepicker",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -1029,7 +1050,7 @@
       "filePath": "src/components/ini-dropdown/ini-dropdown.tsx",
       "encapsulation": "none",
       "tag": "ini-dropdown",
-      "docs": "The Dropdown component offers a compact way to present multiple options without overwhelming the interface.\nBy clicking or hovering, users can unveil a list of choices, making selections both space-efficient and user-friendly.\nWhether used for navigation, action lists, or form inputs, the Dropdown ensures a smooth experience, guiding users through their options with elegance and simplicity.\n\nThis component use the Popper library : https://popper.js.org/docs/v2/",
+      "docs": "The Dropdown component offers a compact way to present multiple options without overwhelming the interface.\nBy clicking or hovering, users can unveil a list of choices, making selections both space-efficient and user-friendly.\nWhether used for navigation, action lists, or form inputs, the Dropdown ensures a smooth experience, guiding users through their options with elegance and simplicity.\n\n> You can use as direct child of the Dropdown a set of tag `<a href>` or `<button>`\n\nThis component use the Popper library : https://popper.js.org/docs/v2/",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -1193,7 +1214,7 @@
       "filePath": "src/components/ini-input/ini-input.tsx",
       "encapsulation": "none",
       "tag": "ini-input",
-      "docs": "Form Input components are the essential touchpoints of user data entry. From simple text fields capturing names to specialized inputs like emails or color pickers,\nthey transform user interactions into actionable data. Designed for clarity and ease of use, these components ensure that users effortlessly provide information,\nwhether its personal details, preferences, or any specific input. Every interaction is optimized for accuracy, ensuring data integrity across varied input types.",
+      "docs": "Form Input components are the essential touchpoints of user data entry. From simple text fields capturing names to specialized inputs like emails or color pickers,\r\nthey transform user interactions into actionable data. Designed for clarity and ease of use, these components ensure that users effortlessly provide information,\r\nwhether its personal details, preferences, or any specific input. Every interaction is optimized for accuracy, ensuring data integrity across varied input types.",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -1603,7 +1624,7 @@
       "filePath": "src/components/ini-modal/ini-modal.tsx",
       "encapsulation": "none",
       "tag": "ini-modal",
-      "docs": "The Modal component emerges as a focused overlay, capturing users' full attention to deliver essential content or actions.\nWhether presenting vital information, confirming user decisions, or offering supplemental details, the Modal provides an immersive environment, momentarily separating users from the main interface.\nIts distinct presence ensures that the information or actions within are both central and prioritized, facilitating focused interactions.",
+      "docs": "The Modal component emerges as a focused overlay, capturing users' full attention to deliver essential content or actions.\r\nWhether presenting vital information, confirming user decisions, or offering supplemental details, the Modal provides an immersive environment, momentarily separating users from the main interface.\r\nIts distinct presence ensures that the information or actions within are both central and prioritized, facilitating focused interactions.",
       "docsTags": [],
       "usage": {},
       "props": [
@@ -1642,6 +1663,7 @@
           "reflectToAttr": false,
           "docs": "The close button label",
           "docsTags": [],
+          "default": "'Close'",
           "values": [
             {
               "type": "string"
@@ -1706,6 +1728,7 @@
           "reflectToAttr": false,
           "docs": "The submit button label",
           "docsTags": [],
+          "default": "'Ok'",
           "values": [
             {
               "type": "string"
